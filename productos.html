@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- Basic -->
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- Mobile Metas -->
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <!-- Site Metas -->
+    <title>Sunor</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Site Icons -->
+    <link rel="shortcut icon" href="#" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="#" />
+
+    <link href="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.5/dist/sweetalert2.min.css" rel="stylesheet">
+
+    
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <!-- Pogo Slider CSS -->
+    <link rel="stylesheet" href="css/pogo-slider.min.css" />
+    <!-- Site CSS -->
+    <link rel="stylesheet" href="css/style.css" />
+    <!-- Responsive CSS -->
+    <link rel="stylesheet" href="css/responsive.css" />
+
+
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+    <style>
+
+        .custom-btn {
+            display: inline-block;
+            background-color: #ffffff; /* Blanco */
+            color: #ff6600; /* Naranja */
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 30px;
+            font-weight: bold;
+            font-size: 16px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+        }
+        
+        .custom-btn:hover {
+            background-color: #ff6600; /* Naranja */
+            color: #ffffff; /* Blanco */
+            transform: scale(1.05); /* Efecto de zoom */
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+        }
+        
+        /* Contenedor principal de la tarjeta */
+        .product-card {
+            background: #fff;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            padding: 15px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            margin-bottom: 30px;
+        }
+
+        .modal-header .btn-close {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            z-index: 10;
+            /* Asegura que el botón se muestre por encima de otros elementos */
+            background: none;
+            /* Quita cualquier fondo que pueda interferir */
+            border: none;
+            /* Sin bordes */
+            font-size: 1.25rem;
+            /* Ajusta el tamaño */
+            color: #000;
+            /* Color del botón */
+        }
+
+        .modal-header .btn-close:hover {
+            color: #ff6600;
+            /* Cambia el color al pasar el mouse */
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Título del producto */
+        .product-title {
+            font-size: 18px;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+        }
+
+        /* Imagen del producto */
+        .product-image, #productImage {
+            width: 100%;
+            height: 200px; /* Mantén una altura fija */
+            object-fit: contain; /* Escala sin distorsionar */
+            border-radius: 8px;
+            margin-bottom: 15px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        
+
+        /* Logotipos de marcas */
+        .product-brands {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 15px;
+        }
+
+        .brand-logo {
+            height: 30px;
+            object-fit: contain;
+        }
+
+        /* Botón "Cotizar" */
+        .modal-btn {
+            background-color: #ff880e;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            font-weight: bold;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+
+        .modal-btn:hover {
+            background-color: #cc6b0d;
+            transform: scale(1.05);
+        }
+
+        /* Ajuste general de los productos */
+        .product-item {
+            margin-bottom: 30px;
+        }
+
+        /* Filtros */
+        .filter-btn {
+            background-color: #f1f1f1;
+            border: 1px solid #ddd;
+            padding: 10px 20px;
+            margin: 5px;
+            font-size: 14px;
+            border-radius: 20px;
+            transition: background-color 0.3s ease, color 0.3s ease;
+            cursor: pointer;
+        }
+
+        .filter-btn:hover {
+            background-color: #ff6600;
+            color: #fff;
+        }
+
+        .filter-btn.active {
+            background-color: #ff6600;
+            color: #fff;
+        }
+
+        /* Paginación */
+        .pagination-btn {
+            background-color: #f8f9fa;
+            border: 2px solid #ff880e;
+            color: #ff880e;
+            padding: 8px 15px;
+            margin: 0 5px;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+
+        .pagination-btn.active,
+        .pagination-btn:hover {
+            background-color: #ff880e;
+            color: white;
+        }
+        .modal-body img {
+            max-height: 300px; /* Altura máxima */
+            max-width: 100%; /* Ancho máximo */
+            margin: 0 auto; /* Centrar */
+            display: block;
+        }
+        
+        /* Ajustes generales */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 0;
+        }
+
+        h2.section-title {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            text-align: center;
+            color: #333;
+        }
+
+        p.section-subtitle {
+            font-size: 16px;
+            color: #666;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body id="inner_page" data-spy="scroll" data-target="#navbar-wd" data-offset="98">
+
+    <!-- LOADER -->
+    <div id="preloader">
+        <div class="loader">
+            <img src="images/loader.gif" alt="#" />
+        </div>
+    </div>
+    <!-- end loader -->
+    <!-- END LOADER -->
+
+    <!-- Start header -->
+    <header class="top-header">
+        <div class="header_top">
+
+            <div class="container">
+                <div class="row">
+                    <div class="logo_section">
+                        <a class="navbar-brand" href="index.html"><img src="images/sunor.png" alt="image"></a>
+                    </div>
+                    <div class="site_information">
+                        <ul>
+                            <li><a href="mailto:exchang@gmail.com"><img src="images/mail_icon.png" alt="#" />contacto@sunor.cl</a></li>
+                            <li><a href="tel:exchang@gmail.com"><img src="images/phone_icon.png" alt="#" />+56 57 2716420</a></li>
+                            <li><a href="https://www.facebook.com/sunor.cl/"><img src="images/facebook.png" alt="https://www.facebook.com/sunor.cl/" /></a></li>
+                       
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="header_bottom">
+            <div class="container">
+                <div class="col-sm-12">
+                    <div class="menu_orange_section" style="background: #ff880e;">
+                        <nav class="navbar header-nav navbar-expand-lg">
+                            <div class="menu_section">
+                                <button class="navbar-toggler" type="button" data-toggle="collapse"
+                                    data-target="#navbar-wd" aria-controls="navbar-wd" aria-expanded="false"
+                                    aria-label="Toggle navigation">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                </button>
+                                <div class="collapse navbar-collapse justify-content-end" id="navbar-wd">
+                                    <ul class="navbar-nav">
+                                        <li><a class="nav-link" href="index.html">Inicio</a></li>
+                                        <li><a class="nav-link" href="about.html">Acerca de nosotros</a></li>
+                                        <li><a class="nav-link" href="services.html">Servicios</a></li>
+                                        <li><a class="nav-link active" href="productos.html">Productos</a></li>
+                                        <li><a class="nav-link" href="contact.html">Contacto</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </nav>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </header>
+    <!-- End header -->
+
+    <!-- Start Banner -->
+    <div class="section inner_page_banner">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="banner_title">
+                        <h3>Productos</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Banner -->
+
+    <div class="section layout_padding">
+        <div class="container">
+            <!-- Título Principal -->
+            <div class="row">
+                <div class="col-md-12 text-center">
+
+                    <h2 class="section-title">Explora nuestra gama de productos por categoría.</h2>
+                </div>
+            </div>
+            <!-- Filtros -->
+            <div class="row mb-4">
+                <div class="col-md-12 text-center">
+                    <button class="filter-btn active" onclick="filterProducts('all')">Todos</button>
+                    <button class="filter-btn" onclick="filterProducts('climatizacion_Industrial')">Industrial</button>
+                    <button class="filter-btn" onclick="filterProducts('climatizacion_Comercial')">Comercial</button>
+                    <button class="filter-btn"
+                        onclick="filterProducts('climatizacion_Residencial')">Residencial</button>
+                </div>
+            </div>
+            <br>
+            <br>
+            <!-- Productos -->
+            <div class="row" id="product-list">
+                <!-- Los productos se generarán aquí -->
+            </div>
+            <!-- Paginación -->
+            <div class="row mt-4">
+                <div class="col-md-12 text-center" id="pagination">
+                    <!-- Botones de paginación -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel" style="color: #ff880e;">Detalles del Producto</h1>
+                    <!-- Botón de cierre con estilo limpio -->
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body text-center">
+                    <!-- Imagen del Producto -->
+                    <img id="productImage" src="" alt="Imagen del producto" class="img-fluid mb-3"
+                        style="max-height: 300px; border-radius: 10px;">
+                    <!-- Nombre del Producto -->
+                    <h4  style="color: #ff880e;" id="productName"></h4>
+                    <!-- Descripción del Producto -->
+                    <p id="productDescription"></p>
+                </div>
+                <div class="modal-footer">
+                    <!-- Botón para cerrar -->
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    <!-- Botón para cotizar -->
+                    <button type="button" class="btn btn-primary" id="cotizarButton" data-bs-toggle="modal"
+                        data-bs-target="#cotizacionModal">
+                        Cotizar
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- Modal de Cotización -->
+    <div class="modal fade" id="cotizacionModal" tabindex="-1" aria-labelledby="cotizacionModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="cotizacionModalLabel">Cotización</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                </div>
+                <div class="modal-body">
+                    <!-- Formulario para EmailJS -->
+                    <form id="cotizacionForm">
+                        <div class="mb-3">
+                            <label for="product_name" class="col-form-label">Producto:</label>
+                            <input type="text" name="product_name" class="form-control" id="product_name" readonly>
+                        </div>
+                        <div class="mb-3">
+                            <label for="from_name" class="col-form-label">Nombre del Remitente:</label>
+                            <input type="text" name="from_name" class="form-control" id="from_name" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="message_id" class="col-form-label">Correo del Remitente:</label>
+                            <input type="email" name="message_id" class="form-control" id="message_id" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="message" class="col-form-label">Mensaje:</label>
+                            <textarea class="form-control" name="message" id="message" required></textarea>
+                        </div>
+                        <input type="hidden" name="_subject" value="Nueva Cotización">
+                        <input type="hidden" name="_captcha" value="false">
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    <button type="button" id="sendButton" class="btn btn-primary">Enviar Mensaje</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+  <!-- Start Footer -->
+  <footer class="footer-box">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 white_fonts">
+                <div class="row">
+                    <div class="col-sm-6 col-md-6 col-lg-3">
+                        <div class="full">
+                            <img class="img-responsive" src="images/Sunor.png" alt="#" />
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-6 col-lg-3">
+                        <div class="full">
+                            <h3>Apartados</h3>
+                        </div>
+                        <div class="full">
+                            <ul class="navbar-nav">
+                                <li><a class="nav-link active" href="index.html">Inicio</a></li>
+                                <li><a class="nav-link" href="about.html">Acerca de nosotros</a></li>
+                                <li><a class="nav-link" href="services.html">Servicios</a></li>
+                                <li><a class="nav-link" href="productos.html">Productos</a></li>
+                                <li><a class="nav-link" href="contact.html">Contacto</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-6 col-lg-3">
+                        <div class="full">
+                            <div class="footer_blog full white_fonts">
+                                <h3>Contacto mas personalizado</h3>
+                                <p></p>
+                                <div class="newsletter_form">
+                                    <a href="contact.html" class="custom-btn">Contacto</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    
+                    <div class="col-sm-6 col-md-6 col-lg-3">
+                        <div class="full">
+                            <div class="footer_blog full white_fonts">
+                                <h3>Informacion de contacto</h3>
+                                <ul class="full">
+                                    <li><img src="images/i5.png"><span>Calle Via Tres 2670<br>Iquique Chile</span>
+                                    </li>
+                                    <li><img src="images/i6.png"><span>Contacto@sunor.cl</span></li>
+                                    <li><img src="images/i7.png"><span>+569-56589321</span></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+<!-- End Footer -->
+
+    <div class="footer_bottom">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <p class="crp">© Copyrights 2024 design by Sunor</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <a href="#" id="scroll-to-top" class="hvr-radial-out"><i class="fa fa-angle-up"></i></a>
+
+    <!-- ALL JS FILES -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/productos.js"></script>
+    <script src="js/formularioCotizar.js"></script>
+
+    <!-- ALL PLUGINS -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.5/dist/sweetalert2.all.min.js"></script>
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="js/jquery.pogo-slider.min.js"></script>
+    <script src="js/slider-index.js"></script>
+    <script src="js/smoothscroll.js"></script>
+    <script src="js/form-validator.min.js"></script>
+    <script src="js/isotope.min.js"></script>
+    <script src="js/images-loded.min.js"></script>
+    <script src="js/custom.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+
+
+</body>
+
+</html>

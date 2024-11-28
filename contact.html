@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- Mobile Metas -->
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <!-- Site Metas -->
+    <title>Exchange Currency - Responsive HTML5 Template</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Site Icons -->
+    <link rel="shortcut icon" href="#" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="#" />
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <!-- Pogo Slider CSS -->
+    <link rel="stylesheet" href="css/pogo-slider.min.css" />
+    <!-- Site CSS -->
+    <link rel="stylesheet" href="css/style.css" />
+    <!-- Responsive CSS -->
+    <link rel="stylesheet" href="css/responsive.css" />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/custom.css" />
+
+    <style>
+        .custom-btn {
+            display: inline-block;
+            background-color: #ffffff;
+            /* Blanco */
+            color: #ff6600;
+            /* Naranja */
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 30px;
+            font-weight: bold;
+            font-size: 16px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+        }
+
+        .custom-btn:hover {
+            background-color: #ff6600;
+            /* Naranja */
+            color: #ffffff;
+            /* Blanco */
+            transform: scale(1.05);
+            /* Efecto de zoom */
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .bold-title {
+            font-weight: bold;
+        }
+
+
+        .custom-button {
+            background: #ff880e;
+            color: #ffffff;
+            padding: 15px 40px;
+            border: none;
+            border-radius: 30px;
+            font-size: 16px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(255, 136, 14, 0.3);
+        }
+
+        .custom-button:hover {
+            background: #e67a0d;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(255, 136, 14, 0.4);
+        }
+
+        .custom-button:active {
+            transform: translateY(1px);
+        }
+
+        .contact-info {
+            background-color: #f8f9fa;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 20px;
+            margin-top: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .contact-info h3 {
+            font-size: 20px;
+            font-weight: bold;
+            color: #ff880e;
+            /* Color destacado para el título */
+            margin-bottom: 15px;
+        }
+
+        .contact-info ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .contact-info ul li {
+            margin-bottom: 10px;
+            font-size: 16px;
+            display: flex;
+            align-items: center;
+        }
+
+        .icon-wrapper {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background-color: #ff880e;
+            /* Fondo naranja */
+            border-radius: 50%;
+            /* Bordes redondeados */
+            margin-right: 10px;
+        }
+
+        .icon-wrapper img {
+            width: 20px;
+            /* Tamaño del ícono */
+            height: 20px;
+            object-fit: contain;
+            /* Asegura que el ícono no se deforme */
+        }
+
+        .contact-info ul li span {
+            flex-shrink: 0;
+            /* Previene que el ícono se reduzca de tamaño */
+        }
+    </style>
+</head>
+
+<body id="inner_page" data-spy="scroll" data-target="#navbar-wd" data-offset="98">
+    <!-- LOADER -->
+    <div id="preloader">
+        <div class="loader">
+            <img src="images/loader.gif" alt="#" />
+        </div>
+    </div>
+    <!-- END LOADER -->
+
+    <!-- Start header -->
+    <header class="top-header">
+        <div class="header_top">
+            <div class="container">
+                <div class="row">
+                    <div class="logo_section">
+                        <a class="navbar-brand" href="index.html"><img src="images/sunor.png" alt="image"></a>
+                    </div>
+                    <div class="site_information">
+                        <ul>
+                            <li><a href="mailto:contacto@sunor.cl"><img src="images/mail_icon.png"
+                                        alt="#" />contacto@sunor.cl</a></li>
+                            <li><a href="tel:+56 57 2716420"><img src="images/phone_icon.png" alt="#" />+56 57
+                                    2716420</a></li>
+                            <li><a href="https://www.facebook.com/sunor.cl/"><img src="images/facebook.png"
+                                        alt="Facebook" /></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="header_bottom">
+            <div class="container">
+                <div class="col-sm-12">
+                    <div class="menu_orange_section" style="background: #ff880e;">
+                        <nav class="navbar header-nav navbar-expand-lg">
+                            <div class="menu_section">
+                                <button class="navbar-toggler" type="button" data-toggle="collapse"
+                                    data-target="#navbar-wd" aria-controls="navbar-wd" aria-expanded="false"
+                                    aria-label="Toggle navigation">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                </button>
+                                <div class="collapse navbar-collapse justify-content-end" id="navbar-wd">
+                                    <ul class="navbar-nav">
+                                        <li><a class="nav-link " href="index.html">Inicio</a></li>
+                                        <li><a class="nav-link" href="about.html">Acerca de nosotros</a></li>
+                                        <li><a class="nav-link" href="services.html">Servicios</a></li>
+                                        <li><a class="nav-link" href="productos.html">Productos</a></li>
+                                        <li><a class="nav-link active" href="contact.html">Contacto</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </nav>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- End header -->
+
+    <!-- Start Banner -->
+    <div class="section inner_page_banner" style="margin-bottom: 3cm;">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="banner_title">
+                        <h3>Contacto</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Banner -->
+    <div class="div-espaciado"></div>
+    <!-- Formulario y mapa -->
+    <div class="container my-5">
+        <h2 class="text-center mb-4 bold-title" style="margin-bottom: 4cm;">Formulario de Contacto</h2>
+        <div class="row">
+            <!-- Formulario -->
+            <div class="col-md-6" style="margin-top: 1cm;">
+                <form id="form" class="contactForm">
+                    <div class="row">
+                        <div class="col-md-12 mb-3">
+                            <input type="text" id="to_names" class="form-control" placeholder="Nombre*" name="to_names" required>
+                        </div>
+                        <div class="col-md-12 mb-3">
+                            <input type="email" id="message_ide" class="form-control" placeholder="Email*" name="message_ide" required>
+                        </div>
+                        <div class="col-md-12 mb-3">
+                            <input type="text" id="nameEmpresa" class="form-control" placeholder="Nombre de la empresa*" name="nameEmpresa" required>
+                        </div>
+                        <div class="col-md-12 mb-3">
+                            <input type="text" id="ciudad" class="form-control" placeholder="Ciudad*" name="ciudad" required>
+                        </div>
+                        <div class="col-md-12 mb-3">
+                            <input type="tel" id="telefono" class="form-control" placeholder="Teléfono* (ej: +569XXXXXXXX)" name="telefono" required>
+                        </div>
+                    </div>
+                    <textarea id="messages" class="form-control mb-3" placeholder="Mensaje*" name="messages" rows="5" required></textarea>
+                    <button type="submit" id="button" class="custom-button">Enviar</button>
+                </form>
+                <div id="alert" style="display: none; padding: 15px; margin: 10px 0; border-radius: 5px;"></div>
+            </div>
+            <!-- Mapa -->
+            <div class="col-md-6">
+                <h3 class="text-center mb-4" style="margin-top: 1cm;">Nuestra Ubicación</h3>
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3742.2481959129386!2d-70.12859998825697!3d-20.289991349542834!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x915214b9bc365013%3A0xd83b452cfe766f75!2sV%C3%ADa%20Tres%202670%2C%20Iquique%2C%20Tarapac%C3%A1!5e0!3m2!1ses-419!2scl!4v1732220847363!5m2!1ses-419!2scl"
+                    width="100%" height="350" frameborder="0" style="border:0;" allowfullscreen="">
+                </iframe>
+
+                <div class="contact-info">
+                    <h3>Información de Contacto</h3>
+                    <ul>
+                        <li><span class="icon-wrapper"><img src="images/i5.png" alt="Dirección"></span> Calle Via Tres
+                            2670, Iquique, Chile</li>
+                        <li><span class="icon-wrapper"><img src="images/i6.png" alt="Email"></span> contacto@sunor.cl
+                        </li>
+                        <li><span class="icon-wrapper"><img src="images/i7.png" alt="Teléfono"></span> +569-56589321
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+
+    <!-- Start Footer -->
+    <footer class="footer-box">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 white_fonts">
+                    <div class="row">
+                        <div class="col-sm-6 col-md-6 col-lg-3">
+                            <div class="full">
+                                <img class="img-responsive" src="images/Sunor.png" alt="#" />
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-md-6 col-lg-3">
+                            <div class="full">
+                                <h3>Apartados</h3>
+                            </div>
+                            <div class="full">
+                                <ul class="navbar-nav">
+                                    <li><a class="nav-link active" href="index.html">Inicio</a></li>
+                                    <li><a class="nav-link" href="about.html">Acerca de nosotros</a></li>
+                                    <li><a class="nav-link" href="services.html">Servicios</a></li>
+                                    <li><a class="nav-link" href="productos.html">Productos</a></li>
+                                    <li><a class="nav-link" href="contact.html">Contacto</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-md-6 col-lg-3">
+                            <div class="full">
+                                <div class="footer_blog full white_fonts">
+                                    <h3>Contacto mas personalizado</h3>
+                                    <p></p>
+                                    <div class="newsletter_form">
+                                        <a href="contact.html" class="custom-btn">Contacto</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="col-sm-6 col-md-6 col-lg-3">
+                            <div class="full">
+                                <div class="footer_blog full white_fonts">
+                                    <h3>Informacion de contacto</h3>
+                                    <ul class="full">
+                                        <li><img src="images/i5.png"><span>Calle Via Tres 2670<br>Iquique Chile</span>
+                                        </li>
+                                        <li><img src="images/i6.png"><span>Contacto@sunor.cl</span></li>
+                                        <li><img src="images/i7.png"><span>+569-56589321</span></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- End Footer -->
+
+
+
+    <!-- Scripts -->
+    <a href="#" id="scroll-to-top" class="hvr-radial-out"><i class="fa fa-angle-up"></i></a>
+
+    <!-- ALL JS FILES -->
+
+    <script src="js/contactoFormulario.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <!-- ALL PLUGINS -->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="js/jquery.pogo-slider.min.js"></script>
+    <script src="js/slider-index.js"></script>
+    <script src="js/smoothscroll.js"></script>
+    <script src="js/form-validator.min.js"></script>
+    <script src="js/contact-form-script.js"></script>
+    <script src="js/isotope.min.js"></script>
+    <script src="js/images-loded.min.js"></script>
+    <script src="js/custom.js"></script>
+</body>
+
+</html>
