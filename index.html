@@ -37,7 +37,6 @@
 
 
     <style>
-        
         /* Mejoras para los iconos */
         .icon-ini-container {
             display: grid;
@@ -203,60 +202,134 @@
                 line-height: 1.2;
             }
         }
+
         @media (max-width: 768px) {
             .footer-box .container {
                 padding: 0 15px;
                 max-width: 100%;
             }
-            
+
             .footer_blog {
                 padding-right: 0;
             }
-            
+
             .white_fonts {
                 padding-right: 0;
             }
-            
-            .footer-box .row > div {
+
+            .footer-box .row>div {
                 padding-right: 0;
             }
         }
-        
+
         @media (max-width: 768px) {
             .section.white_fonts .row {
                 display: flex;
                 flex-direction: column-reverse;
             }
-            
+
             .section.white_fonts .col-md-6 {
                 width: 100%;
             }
-            
+
             .heading_main.text_align_left {
                 margin-top: 0;
             }
-            
+
             .section.white_fonts .layout_padding {
                 margin-top: 0;
             }
-            
+
             .carousel-inner img {
                 width: 100%;
                 height: auto;
             }
-            
+
             /* Remove extra top spacing */
             .heading_main.text_align_left[style*="margin-top"] {
                 margin-top: 0 !important;
             }
-            
+
             .col-md-6.layout_padding[style*="margin-top"] {
                 margin-top: 0 !important;
             }
         }
-      
-        
-        
+
+
+        /* Sección principal de ¿Quiénes somos? */
+        .section-who {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            margin: 40px 15px;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: none;
+            border: none;
+        }
+
+        /* Imagen */
+        .section-who img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin: 0 auto;
+        }
+
+        /* Contenido textual */
+        .section-who .content {
+            padding: 20px;
+            flex: 1;
+            text-align: center;
+        }
+
+        .section-who .content h2 {
+            font-size: 2.5rem;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .section-who .content p {
+            font-size: 1.1rem;
+            color: #666;
+            line-height: 1.8;
+            margin-bottom: 30px;
+        }
+
+        /* Ajuste en pantallas medianas */
+        @media (max-width: 768px) {
+            .section-who {
+                flex-direction: column;
+                /* Para alinear verticalmente */
+            }
+
+            .section-who .content {
+                margin-top: 10px;
+                /* Pequeña separación */
+            }
+
+            .section-who .content h2 {
+                margin-top: 5px;
+                /* Reduce margen del título */
+                font-size: 1.8rem;
+                /* Tamaño ajustado del título */
+            }
+        }
+
+        /* Ajuste en pantallas pequeñas */
+        @media (max-width: 480px) {
+            .section-who .content {
+                margin-top: 5px;
+                /* Menor separación */
+            }
+
+            .section-who .content h2 {
+                margin-top: 2px;
+                /* Muy cerca de la imagen */
+                font-size: 1.6rem;
+                /* Tamaño más pequeño del título */
+            }
+        }
     </style>
 
 </head>
@@ -279,7 +352,8 @@
             <div class="container">
                 <div class="row">
                     <div class="logo_section">
-                        <a class="navbar-brand" href="index.html"><img src="/SunorPage/images/Sunor.png" alt="image"></a>
+                        <a class="navbar-brand" href="index.html"><img src="/SunorPage/images/Sunor.png"
+                                alt="image"></a>
                     </div>
                     <div class="site_information">
                         <ul>
@@ -336,14 +410,14 @@
                     <div class="pogoSlider-slide" style="background-image:url(images/pagina\ 1.jpg);">
                         <div class="container">
                             <div class="row">
-                                
+
                             </div>
                         </div>
                     </div>
                     <div class="pogoSlider-slide" style="background-image:url(images/pagina\ 3.jpg);">
                         <div class="container">
                             <div class="row">
-                                
+
                             </div>
                         </div>
                     </div>
@@ -380,34 +454,28 @@
         </div>
     </div>
 
-    <div class="section" style="margin-top: 1cm;">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6">
-                    <div class="full text_align_right_img">
-                        <img src="images/Equipo Sunor oficial - copia.png" alt="#" />
-                    </div>
-                </div>
-                <div class="col-md-6 layout_padding">
-                    <div class="full paddding_left_15">
-                        <div class="heading_main text_align_left">
-                            <h2><span class="theme_color">¿Quienes</span> Somos?</h2>
-                        </div>
-                    </div>
-                    <div class="full paddding_left_15">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                            laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
-                            voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-                            cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
-                    </div>
-                    <div class="full paddding_left_15">
-                        <a class="main_bt" href="about.html">Saber mas ></a>
-                    </div>
+    <div class="section-who">
+        <div class="image">
+            <img src="images/Equipo Sunor oficial - copia.png" alt="Equipo Sunor">
+        </div>
+        <div class="content" style="margin-top: 2cm;">
+            <h2>¿Quiénes <span style="color: #ff6600;">Somos?</span></h2>
+            <p>
+                Sunor, con más de 9 años de experiencia, somos especialistas en incendio y climatización,
+                ofreciendo soluciones integrales en proyectos, instalación y mantenimiento de sistemas de aire
+                acondicionado.
+                Nos comprometemos a mejorar la calidad de vida de nuestros clientes mediante un servicio confiable,
+                innovador y a medida de sus necesidades.
+            </p>
+            <div class="full" style="margin-top: 2cm;">
+                <div class="center">
+                    <a class="main_bt" href="services.html">Saber mas ></a>
                 </div>
             </div>
+
         </div>
     </div>
+
     <!-- end section -->
     <!-- section -->
     <div class="section layout_padding">
@@ -425,25 +493,25 @@
                 <div class="col-md-3 col-sm-6 col-xs-12">
                     <div class="full services_blog">
                         <img class="img-responsive" src="images/portafolio3.jpg" alt="#" />
-                        <h4>Respaldo De Energia</h4>
+                        <h4>Ingenieria</h4>
                     </div>
                 </div>
                 <div class="col-md-3 col-sm-6 col-xs-12">
                     <div class="full services_blog">
                         <img class="img-responsive" src="images/redinter4.jpeg" alt="#" />
-                        <h4>Climatizacion Industrial</h4>
+                        <h4>Instalacion</h4>
                     </div>
                 </div>
                 <div class="col-md-3 col-sm-6 col-xs-12">
                     <div class="full services_blog">
                         <img class="img-responsive" src="images/sqm y sunor.jpg" alt="#" />
-                        <h4>Sistema Contra Incendios</h4>
+                        <h4>Proyectos</h4>
                     </div>
                 </div>
                 <div class="col-md-3 col-sm-6 col-xs-12">
                     <div class="full services_blog">
                         <img class="img-responsive" src="images/caja2.jpeg" alt="#" />
-                        <h4>Soluciones Modulares</h4>
+                        <h4>Matencion</h4>
                     </div>
                 </div>
             </div>
@@ -473,7 +541,7 @@
                         <<div id="trabajosCarousel" class="carousel slide" data-ride="carousel" data-interval="3000"
                             data-pause="hover">
 
-                            <div class="carousel-inner" style="margin-bottom: 2cm;">
+                            <div class="carousel-inner">
                                 <div class="carousel-item active">
                                     <img src="images/Trabajos.jpeg" class="d-block w-100" alt="Trabajo 1">
                                 </div>
@@ -501,7 +569,7 @@
             </div>
         </div>
     </div>
-</div>
+    </div>
 
 
     <!-- end section -->

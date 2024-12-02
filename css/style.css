@@ -937,6 +937,21 @@ a.navbar-brand {
     justify-content: center;
 }
 
+.inner_page_banners {
+    float: left;
+    width: 100%;
+    padding-top: 60px;
+    height: 600px;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../images/Equipo\ Sunor\ oficial.png");
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
 .inner_page_banner h3 {
     font-size: 48px;
     color: #fff;
@@ -980,11 +995,7 @@ a.navbar-brand {
 	margin-bottom: 30px;
 }
 
-.about_bg {
-    background-image: url('../images/Sunor.png');
-    background-repeat: no-repeat;
-    background-position: left center;
-}
+
 
 .about-img {
 	padding: 30px 0px;

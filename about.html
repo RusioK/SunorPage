@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
     <!-- Site Metas -->
-    <title>Exchange Currency - Responsive HTML5 Template</title>
+    <title>Sunor</title>
     <meta name="keywords" content="">
     <meta name="description" content="">
     <meta name="author" content="">
@@ -59,6 +59,197 @@
             /* Efecto de zoom */
             box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
         }
+
+
+        .heading_main {
+            text-align: center;
+            /* Centra el título */
+            margin-bottom: 30px;
+            /* Espaciado inferior */
+            position: relative;
+            /* Necesario para el subrayado */
+        }
+
+        .heading_main h2 {
+            font-size: 2.5rem;
+            /* Tamaño del texto del título */
+            font-weight: bold;
+            /* Peso del título */
+            margin: 0;
+            /* Sin margen extra */
+            position: relative;
+            /* Relativo para el subrayado */
+        }
+
+        .heading_main h2::after {
+            content: "";
+            width: 100px;
+            /* Ancho del subrayado */
+            height: 4px;
+            /* Alto del subrayado */
+            background-color: #ff6600;
+            position: absolute;
+            bottom: -10px;
+            /* Ajuste debajo del título */
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .section ul {
+            padding-left: 20px;
+            /* Indentación del listado */
+            list-style: disc;
+            /* Estilo del marcador */
+            line-height: 1.8;
+            /* Altura de línea para mejorar la legibilidad */
+        }
+
+        .section ul li {
+            margin-bottom: 10px;
+            /* Espaciado entre los elementos */
+        }
+
+        .section img {
+            max-width: 100%;
+            /* Asegura que la imagen no desborde su contenedor */
+            border-radius: 8px;
+            /* Bordes redondeados */
+            margin-top: 20px;
+            /* Espaciado superior */
+        }
+
+        .section .heading_main {
+            text-align: center;
+            /* Centra el título */
+            margin-bottom: 20px;
+            /* Espaciado inferior */
+        }
+
+        .section .heading_main h2 {
+            font-size: 2.5rem;
+            /* Tamaño del título */
+            font-weight: bold;
+            /* Peso del título */
+            margin-bottom: 10px;
+            /* Espaciado entre el título y la línea decorativa */
+            position: relative;
+            /* Relativo para el subrayado */
+        }
+
+        .section .heading_main h2::after {
+            content: "";
+            width: 100px;
+            /* Ancho del subrayado */
+            height: 4px;
+            /* Altura del subrayado */
+            background-color: #ff6600;
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .section .content-centered {
+            text-align: center;
+            /* Centra el texto */
+            font-size: 1.1rem;
+            /* Tamaño del texto */
+            line-height: 1.8;
+            /* Espaciado entre líneas */
+            color: #333;
+            /* Color del texto */
+            margin: 0 auto;
+            /* Centra el contenido */
+            max-width: 800px;
+            /* Ancho máximo del texto */
+            padding: 20px 15px;
+            /* Espaciado interno */
+        }
+
+        .section img {
+            display: block;
+            /* Centra la imagen como bloque */
+            margin: 20px auto 0;
+            /* Centra y agrega espaciado superior */
+            max-width: 100%;
+            /* Ajusta al ancho disponible */
+            border-radius: 8px;
+            /* Bordes redondeados */
+        }
+
+        .section .content-centered {
+            text-align: center;
+            /* Centra el texto horizontalmente */
+            margin: 0 auto;
+            /* Asegura que esté centrado en el contenedor */
+            padding: 20px;
+            /* Espaciado interno */
+            max-width: 700px;
+            /* Limita el ancho del texto para mejor legibilidad */
+            line-height: 1.8;
+            /* Espaciado entre líneas */
+            font-size: 1.1rem;
+            /* Ajusta el tamaño de fuente */
+            color: #333;
+            /* Color del texto */
+        }
+
+        .section img {
+            display: block;
+            margin: 20px auto 0;
+            /* Centra la imagen y agrega espacio arriba */
+            max-width: 100%;
+            border-radius: 8px;
+        }
+
+        .section .vision-content {
+            text-align: center;
+            /* Centrar el texto */
+            margin: 0 auto;
+            /* Centrar en el contenedor */
+            padding: 20px;
+            /* Espaciado interno */
+            max-width: 700px;
+            /* Limitar el ancho del texto */
+            line-height: 1.8;
+            /* Espaciado entre líneas */
+            font-size: 1.1rem;
+            /* Tamaño de fuente */
+            color: #333;
+            /* Color del texto */
+        }
+
+        .section .vision-img {
+            display: block;
+            margin: 20px auto 0;
+            /* Centrar la imagen */
+            max-width: 100%;
+            /* Escalar la imagen */
+            border-radius: 8px;
+            /* Bordes redondeados */
+        }
+
+        .heading_main.text_align_left {
+            text-align: center;
+            /* Centrar el título */
+        }
+
+        .heading_main.text_align_left h2 {
+            position: relative;
+            display: inline-block;
+        }
+
+        .heading_main.text_align_left h2::after {
+            content: "";
+            width: 80px;
+            height: 4px;
+            background-color: #ff6600;
+            /* Naranja */
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
     </style>
 </head>
 
@@ -80,7 +271,8 @@
             <div class="container">
                 <div class="row">
                     <div class="logo_section">
-                        <a class="navbar-brand" href="index.html"><img src="/SunorPage/images/Sunor.png" alt="image"></a>
+                        <a class="navbar-brand" href="index.html"><img src="/SunorPage/images/Sunor.png"
+                                alt="image"></a>
                     </div>
                     <div class="site_information">
                         <ul>
@@ -121,7 +313,7 @@
                                 </div>
                             </div>
                         </nav>
-                        
+
                     </div>
                 </div>
             </div>
@@ -136,105 +328,111 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="banner_title">
-                        <h3>About us</h3>
+                        <h3>Acerca de Nosotros</h3>
                     </div>
                 </div>
             </div>
         </div>
     </div>
     <!-- End Banner -->
+    <div class="section layout_padding about_bg">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="heading_main" style="margin-bottom: 3cm;">
+                        <h2><span class="theme_color">Principios</span></h2>
+                    </div>
+                </div>
+                <div class="col-md-6">
 
-    <!-- section -->
+                    <ul>
+                        <li><strong><span class="theme_color">Integridad y Ética: </span></strong>Somos consecuentes en
+                            nuestras acciones, cumplimos nuestras
+                            promesas y actuamos con honestidad, respeto y ética en cada oportunidad y escenario.</li>
+                        <li><strong><span class="theme_color">Orientación al Cliente:</span></strong> Trabajamos para
+                            entregar soluciones integrales que se
+                            transformen en relaciones rentables de largo plazo con los clientes. Hacemos del servicio un
+                            imperativo para traducir la satisfacción en lealtad.</li>
+                        <li><strong><span class="theme_color">Compromiso:</span></strong> Requerimos el involucramiento
+                            en cada una de las iniciativas que
+                            emprendemos, haciendo de la responsabilidad un concepto básico para lograr que las cosas
+                            sucedan
+                            de acuerdo a lo previsto.</li>
+                        <li><strong><span class="theme_color">Excelencia:</span></strong> Buscamos ejecutar nuestro
+                            trabajo de forma disciplinada, rigurosa y
+                            eficiente, haciendo del día a día una oportunidad para mejorar de forma continua nuestro
+                            desempeño, procesos, servicios y relación con nuestros clientes.</li>
+                        <li><strong><span class="theme_color"> Orientación a Resultados:</span></strong> Somos
+                            proactivos y perseverantes en el logro de los
+                            objetivos y metas establecidas, buscando que nuestro rendimiento se traduzca en aumentos de
+                            productividad y mejores resultados.</li>
+                    </ul>
+                </div>
+                <div class="col-md-6">
+                    <img src="images/AcercaDe/integridad.png" alt="Imagen Principios">
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
     <div class="section layout_padding about_bg">
         <div class="container">
             <div class="row">
                 <div class="col-md-6">
-                    <div class="full paddding_left_15">
-                        <div class="heading_main text_align_left">
-                            <h2>About</h2>
-                        </div>
-                    </div>
-                    <div class="full paddding_left_15">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                            laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
-                            voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-                            cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
-                    </div>
-                    <div class="full paddding_left_15">
-                        <a class="main_bt" href="#">Read More ></a>
-                    </div>
+                    <img src="images/AcercaDe/Captura de pantalla 2024-12-02 033209.png" alt="Imagen Misión"
+                        style="border-radius: 8px;">
                 </div>
-                <div class="col-md-6">
-                    <div class="full text_align_right_img">
-                        <img src="images/img3.png" alt="#" />
+                <div class="col-md-6" style="margin-top: 2cm;">
+                    <div class="heading_main">
+                        <h2>Nuestra <span class="theme_color">Misión</span></h2>
+                    </div>
+                    <div class="content-centered">
+                        <p>
+                            Ser protagonista en el negocio MINERO, INDUSTRIAL Y RETAIL, contribuyendo al desarrollo de
+                            nuestros clientes a través de la ejecución de proyectos exitosos, basados en la calidad del
+                            servicio y sustentabilidad, con un equipo de trabajo comprometido con la excelencia, que se
+                            desempeña en un entorno que fomenta el desarrollo profesional y personal.
+                        </p>
+
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <!-- end section -->
 
-    <!-- section -->
-    <div class="section">
+    <div class="section layout_padding about_bg">
         <div class="container">
             <div class="row">
                 <div class="col-md-6">
-                    <div class="full text_align_right_img">
-                        <img src="images/img1.png" alt="#" />
+                    <div class="vision-content">
+                        <div class="heading_main">
+                            <h2>Nuestra <span class="theme_color">Vision</span></h2>
+                        </div>
+                        <p>
+                            Somos una empresa de servicios integrales de <span class="theme_color">INGENIERÍA</span>,
+                            <span class="theme_color">MONTAJE Y MANTENIMIENTO</span>, orientada a satisfacer las
+                            necesidades de empresas <span class="theme_color">MINERAS</span>,<span
+                                class="theme_color">INDUSTRIALES</span> , <span class="theme_color">HOTELERA Y
+                                RETAIL</span>. <br><br> Nuestros clientes son
+                            empresas que ejecutan proyectos que contribuyen al desarrollo económico del país, que
+                            valoran la excelencia operacional, las relaciones de largo plazo y ética en los negocios.
+                            Creamos valor para nuestros clientes entregando soluciones eficientes que garantizan la
+                            seguridad, calidad y respeto al medio ambiente.
+                        </p>
+
                     </div>
                 </div>
-                <div class="col-md-6 layout_padding">
-                    <div class="full paddding_left_15">
-                        <div class="heading_main text_align_left">
-                            <h2><span class="theme_color">Welcome</span> To Exchange</h2>
-                        </div>
-                    </div>
-                    <div class="full paddding_left_15">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                            laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
-                            voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-                            cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
-                    </div>
-                    <div class="full paddding_left_15">
-                        <a class="main_bt" href="#">About more ></a>
-                    </div>
+                <div class="col-md-6">
+                    <img class="vision-img" src="images/AcercaDe/mujer.jpg" alt="Imagen Visión">
                 </div>
             </div>
         </div>
     </div>
+
     <!-- end section -->
 
-    <!-- section -->
-    <div class="section white_fonts" style="background: #111;">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6" style="background: #fff;">
-                    <div class="full text_align_right_img">
-                        <img src="images/img2.png" alt="#" />
-                    </div>
-                </div>
-                <div class="col-md-6 layout_padding">
-                    <div class="full paddding_left_15">
-                        <div class="heading_main text_align_left">
-                            <h2><span class="theme_color">Apply for</span> Exchange</h2>
-                        </div>
-                    </div>
-                    <div class="full paddding_left_15">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                            laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
-                            voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-                            cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
-                    </div>
-                    <div class="full paddding_left_15">
-                        <a class="main_bt" href="#">Exchange ></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
     <!-- end section -->
     <!-- Start Footer -->
     <footer class="footer-box">

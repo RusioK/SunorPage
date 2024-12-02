@@ -309,21 +309,65 @@
             }
         }
 
-        @media (max-width: 768px) {
+        /* Ajustes para pantallas de tablets */
+        @media (max-width: 992px) {
             .service-details {
                 grid-template-columns: 1fr;
+                /* Cambiar a una sola columna */
                 text-align: center;
+                /* Centrar el texto */
             }
 
             .service-image {
-                max-width: 400px;
+                max-width: 80%;
+                /* Ajustar el ancho de la imagen */
                 margin: 0 auto;
+                /* Centrar la imagen */
             }
 
             .service-details p {
-                padding: 20px 0;
+                font-size: 16px;
+                /* Reducir tamaño del texto */
+                line-height: 1.8;
+                /* Espaciado adecuado */
             }
         }
+
+        /* Ajustes para pantallas de móviles */
+        @media (max-width: 768px) {
+            .service-details {
+                padding: 15px;
+                /* Reducir el padding del contenedor */
+            }
+
+            .service-image {
+                max-width: 100%;
+                /* Imagen ocupa el 100% del contenedor */
+            }
+
+            .service-details p {
+                font-size: 15px;
+                /* Texto un poco más pequeño */
+                line-height: 1.7;
+                /* Ajustar espaciado entre líneas */
+            }
+        }
+
+        /* Ajustes para móviles pequeños */
+        @media (max-width: 576px) {
+            .service-details {
+                padding: 10px;
+                /* Padding mínimo */
+            }
+
+            .service-details p {
+                font-size: 14px;
+                /* Texto más pequeño para móviles pequeños */
+                line-height: 1.6;
+                /* Espaciado compacto pero legible */
+            }
+        }
+
 
         @media (max-width: 480px) {
             .service-category h2 {
@@ -438,13 +482,20 @@
                         <div class="service-image">
                             <img src="images/Servicios/Captura de pantalla 2024-11-27 173335.png" alt="Residencial">
                         </div>
-                        <p>Compra el equipo que se adapte a tus necesidades (contamos con asesoría personalizada) y
-                            nosotros nos ocupamos de que funcione en el lugar adecuado.
-
-                            El montaje, prueba y puesta en servicio realizada por Sunor, cuenta con estándares de
-                            calidad certificado por nuestro equipo profesional en sistemas de climatización.</p>
+                        <div>
+                            <p>
+                                Compra el equipo que se adapte a tus necesidades (contamos con asesoría personalizada) y
+                                nosotros nos ocupamos de que funcione en el lugar adecuado.
+                            </p>
+                            <br>
+                            <p>
+                                El montaje, prueba y puesta en servicio realizada por Sunor, cuenta con estándares de
+                                calidad certificado por nuestro equipo profesional en sistemas de climatización.
+                            </p>
+                        </div>
                     </div>
                 </div>
+
 
                 <div class="service-category">
                     <h2>Comercial</h2>
@@ -452,13 +503,21 @@
                         <div class="service-image">
                             <img src="images/Servicios/Captura de pantalla 2024-11-27 173538.png" alt="Comercial">
                         </div>
-                        <p>Brindamos soluciones de climatización específicas para locales comerciales, diseñadas para
-                            garantizar confort y eficiencia en espacios como oficinas, tiendas, restaurantes y centros
-                            comerciales.
+                        <div>
 
-                            pAdaptamos cada proyecto a las necesidades del cliente, asegurando un ambiente agradable
-                            para empleados y clientes, optimizando el consumo energético y mejorando la experiencia en
-                            el lugar.</p>
+                            <p>Brindamos soluciones de climatización específicas para locales comerciales, diseñadas
+                                para
+                                garantizar confort y eficiencia en espacios como oficinas, tiendas, restaurantes y
+                                centros
+                                comerciales.
+                            </p>
+                            <br>
+                            <p>Adaptamos cada proyecto a las necesidades del cliente, asegurando un ambiente agradable
+                                para empleados y clientes, optimizando el consumo energético y mejorando la experiencia
+                                en
+                                el lugar.
+                            </p>
+                        </div>
                     </div>
                 </div>
 
@@ -468,12 +527,21 @@
                         <div class="service-image">
                             <img src="images/Servicios/Captura de pantalla 2024-11-27 173555.png" alt="Industrial">
                         </div>
-                        <p>Ofrecemos sistemas de climatización robustos y eficientes para instalaciones industriales
-                            como fábricas, almacenes y plantas productivas.
+                        <div>
 
-                            Diseñamos e implementamos proyectos personalizados que garantizan el control de temperatura,
-                            ventilación y calidad del aire, asegurando un entorno óptimo para operaciones continuas y
-                            cumpliendo con los estándares técnicos y normativos más exigentes.</p>
+                            <p>Ofrecemos sistemas de climatización robustos y eficientes para instalaciones industriales
+                                como fábricas, almacenes y plantas productivas.
+                            </p>
+                            <br>
+                            <p>Diseñamos e implementamos proyectos personalizados que garantizan el control de
+                                temperatura,
+                                ventilación y calidad del aire, asegurando un entorno óptimo para operaciones continuas
+                                y
+                                cumpliendo con los estándares técnicos y normativos más exigentes.
+                            </p>
+
+
+                        </div>
                     </div>
                 </div>
             </div>
