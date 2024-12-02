@@ -942,7 +942,7 @@ a.navbar-brand {
     width: 100%;
     padding-top: 60px;
     height: 600px;
-    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../images/Equipo\ Sunor\ oficial.png");
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../images/Servicios/Potada\ contacto.jpg");
     background-size: 100% auto;
     background-repeat: no-repeat;
     background-position: center;
@@ -951,7 +951,16 @@ a.navbar-brand {
     justify-content: center;
 }
 
-
+.inner_page_banners h3 {
+    font-size: 48px;
+    color: #fff;
+    padding: 40px 15px;
+    text-align: center;
+    margin-top: 200px;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
 .inner_page_banner h3 {
     font-size: 48px;
     color: #fff;
