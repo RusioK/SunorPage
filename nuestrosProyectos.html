@@ -35,225 +35,10 @@
       <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
     <style>
-        .custom-btn {
-            display: inline-block;
-            background-color: #ffffff;
-            /* Blanco */
-            color: #ff6600;
-            /* Naranja */
-            text-decoration: none;
-            padding: 10px 20px;
-            border-radius: 30px;
-            font-weight: bold;
-            font-size: 16px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
-        }
-
-        .custom-btn:hover {
-            background-color: #ff6600;
-            /* Naranja */
-            color: #ffffff;
-            /* Blanco */
-            transform: scale(1.05);
-            /* Efecto de zoom */
-            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
-        }
-
-
-        .heading_main {
-            text-align: center;
-            /* Centra el título */
-            margin-bottom: 30px;
-            /* Espaciado inferior */
-            position: relative;
-            /* Necesario para el subrayado */
-        }
-
-        .heading_main h2 {
-            font-size: 2.5rem;
-            /* Tamaño del texto del título */
-            font-weight: bold;
-            /* Peso del título */
-            margin: 0;
-            /* Sin margen extra */
-            position: relative;
-            /* Relativo para el subrayado */
-        }
-
-        .heading_main h2::after {
-            content: "";
-            width: 100px;
-            /* Ancho del subrayado */
-            height: 4px;
-            /* Alto del subrayado */
-            background-color: #ff6600;
-            position: absolute;
-            bottom: -10px;
-            /* Ajuste debajo del título */
-            left: 50%;
-            transform: translateX(-50%);
-        }
-
-        .section ul {
-            padding-left: 20px;
-            /* Indentación del listado */
-            list-style: disc;
-            /* Estilo del marcador */
-            line-height: 1.8;
-            /* Altura de línea para mejorar la legibilidad */
-        }
-
-        .section ul li {
-            margin-bottom: 10px;
-            /* Espaciado entre los elementos */
-        }
-
-        .section img {
-            max-width: 100%;
-            /* Asegura que la imagen no desborde su contenedor */
-            border-radius: 8px;
-            /* Bordes redondeados */
-            margin-top: 20px;
-            /* Espaciado superior */
-        }
-
-        .section .heading_main {
-            text-align: center;
-            /* Centra el título */
-            margin-bottom: 20px;
-            /* Espaciado inferior */
-        }
-
-        .section .heading_main h2 {
-            font-size: 2.5rem;
-            /* Tamaño del título */
-            font-weight: bold;
-            /* Peso del título */
-            margin-bottom: 10px;
-            /* Espaciado entre el título y la línea decorativa */
-            position: relative;
-            /* Relativo para el subrayado */
-        }
-
-        .section .heading_main h2::after {
-            content: "";
-            width: 100px;
-            /* Ancho del subrayado */
-            height: 4px;
-            /* Altura del subrayado */
-            background-color: #ff6600;
-            position: absolute;
-            bottom: -10px;
-            left: 50%;
-            transform: translateX(-50%);
-        }
-
-        .section .content-centered {
-            text-align: center;
-            /* Centra el texto */
-            font-size: 1.1rem;
-            /* Tamaño del texto */
-            line-height: 1.8;
-            /* Espaciado entre líneas */
-            color: #333;
-            /* Color del texto */
-            margin: 0 auto;
-            /* Centra el contenido */
-            max-width: 800px;
-            /* Ancho máximo del texto */
-            padding: 20px 15px;
-            /* Espaciado interno */
-        }
-
-        .section img {
-            display: block;
-            /* Centra la imagen como bloque */
-            margin: 20px auto 0;
-            /* Centra y agrega espaciado superior */
-            max-width: 100%;
-            /* Ajusta al ancho disponible */
-            border-radius: 8px;
-            /* Bordes redondeados */
-        }
-
-        .section .content-centered {
-            text-align: center;
-            /* Centra el texto horizontalmente */
-            margin: 0 auto;
-            /* Asegura que esté centrado en el contenedor */
-            padding: 20px;
-            /* Espaciado interno */
-            max-width: 700px;
-            /* Limita el ancho del texto para mejor legibilidad */
-            line-height: 1.8;
-            /* Espaciado entre líneas */
-            font-size: 1.1rem;
-            /* Ajusta el tamaño de fuente */
-            color: #333;
-            /* Color del texto */
-        }
-
-        .section img {
-            display: block;
-            margin: 20px auto 0;
-            /* Centra la imagen y agrega espacio arriba */
-            max-width: 100%;
-            border-radius: 8px;
-        }
-
-        .section .vision-content {
-            text-align: center;
-            /* Centrar el texto */
-            margin: 0 auto;
-            /* Centrar en el contenedor */
-            padding: 20px;
-            /* Espaciado interno */
-            max-width: 700px;
-            /* Limitar el ancho del texto */
-            line-height: 1.8;
-            /* Espaciado entre líneas */
-            font-size: 1.1rem;
-            /* Tamaño de fuente */
-            color: #333;
-            /* Color del texto */
-        }
-
-        .section .vision-img {
-            display: block;
-            margin: 20px auto 0;
-            /* Centrar la imagen */
-            max-width: 100%;
-            /* Escalar la imagen */
-            border-radius: 8px;
-            /* Bordes redondeados */
-        }
-
-        .heading_main.text_align_left {
-            text-align: center;
-            /* Centrar el título */
-        }
-
-        .heading_main.text_align_left h2 {
-            position: relative;
-            display: inline-block;
-        }
-
-        .heading_main.text_align_left h2::after {
-            content: "";
-            width: 80px;
-            height: 4px;
-            background-color: #ff6600;
-            /* Naranja */
-            position: absolute;
-            bottom: -10px;
-            left: 50%;
-            transform: translateX(-50%);
-        }
         .navbar {
             flex-wrap: wrap;
         }
-        
+
         .navbar-nav {
             display: flex;
             justify-content: space-between;
@@ -261,43 +46,44 @@
             margin: 0;
             padding: 0 15px;
         }
-        
+
         .nav-link {
             padding: 8px 12px;
             font-size: 15px;
             white-space: nowrap;
         }
-        
+
         @media (min-width: 992px) {
             .navbar-nav {
                 flex-wrap: nowrap;
             }
-            
+
             .nav-link {
                 padding: 8px 15px;
             }
         }
+
         .site_information ul {
             display: flex;
             align-items: center;
             flex-wrap: nowrap;
         }
-        
+
         .site_information ul li {
             display: inline-flex;
             align-items: center;
             margin-right: 15px;
         }
-        
+
         .site_information ul li:last-child {
             margin-right: 0;
         }
-        
+
         .site_information ul li img {
             margin-right: 5px;
         }
-        
     </style>
+
 </head>
 
 <body id="inner_page" data-spy="scroll" data-target="#navbar-wd" data-offset="98">
@@ -327,8 +113,10 @@
                                         alt="#" />contacto@sunor.cl</a></li>
                             <li><a href="tel:exchang@gmail.com"><img src="images/phone_icon.png" alt="#" />57
                                     2716420</a></li>
-                            <li><a href="https://www.facebook.com/sunor.cl/"><img src="images/facebook.png"alt="https://www.facebook.com/sunor.cl/" /></a></li>
-                            <li><a href="https://www.instagram.com/sunor.cl/"><img src="images/instagram.png"alt="https://www.instagram.com/sunor.cl/" /></a></li>
+                            <li><a href="https://www.facebook.com/sunor.cl/"><img src="images/facebook.png"
+                                        alt="https://www.facebook.com/sunor.cl/" /></a></li>
+                            <li><a href="https://www.instagram.com/sunor.cl/"><img src="images/instagram.png"
+                                        alt="https://www.instagram.com/sunor.cl/" /></a></li>
 
                         </ul>
                     </div>
@@ -342,22 +130,25 @@
                     <div class="menu_orange_section" style="background: #ff880e;">
                         <nav class="navbar header-nav navbar-expand-lg">
                             <div class="menu_section">
-                                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-wd" aria-controls="navbar-wd" aria-expanded="false" aria-label="Toggle navigation">
+                                <button class="navbar-toggler" type="button" data-toggle="collapse"
+                                    data-target="#navbar-wd" aria-controls="navbar-wd" aria-expanded="false"
+                                    aria-label="Toggle navigation">
                                     <span class="navbar-toggler-icon"></span>
                                 </button>
-                                
+
                                 <div class="collapse navbar-collapse" id="navbar-wd">
                                     <ul class="navbar-nav">
                                         <li><a class="nav-link" href="index.html">Inicio</a></li>
                                         <li><a class="nav-link" href="about.html">Acerca de nosotros</a></li>
-                                        <li><a class="nav-link active" href="nuestrosProyectos.html">Nuestros Proyectos</a></li>
+                                        <li><a class="nav-link active" href="nuestrosProyectos.html">Nuestros
+                                                Proyectos</a></li>
                                         <li><a class="nav-link" href="services.html">Servicios</a></li>
                                         <li><a class="nav-link" href="productos.html">Productos</a></li>
                                         <li><a class="nav-link" href="contact.html">Contacto</a></li>
-                                        
+
                                     </ul>
                                 </div>
-                                
+
                             </div>
                         </nav>
                     </div>
@@ -369,117 +160,308 @@
     <!-- End header -->
 
     <!-- Start Banner -->
-    <div class="section inner_page_banner">
+    <div class="section inner_page_banner" style="margin-bottom: 3cm;">
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
                     <div class="banner_title">
-                        <h3>Acerca de Nosotros</h3>
+                        <h3>Nuestros Proyectos</h3>
                     </div>
                 </div>
             </div>
         </div>
     </div>
     <!-- End Banner -->
-    <div class="section layout_padding about_bg">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="heading_main" style="margin-bottom: 3cm;">
-                        <h2><span class="theme_color">Principios</span></h2>
+    <!-- Projects Section -->
+    <div class="projects-container">
+        <h2 style="margin-bottom: 3cm;" class="section-title">Nuestros Proyectos</h2>
+
+        <div class="projects-grid">
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="images/trabajosRealizados/cortinasAireMallZofri.png" alt="Proyecto Cortinas Mall Zofri">
+                    <div class="image-overlay">
+                        <span class="view-text">Ver Imagen</span>
                     </div>
                 </div>
-                <div class="col-md-6">
-
-                    <ul>
-                        <li><strong><span class="theme_color">Integridad y Ética: </span></strong>Somos consecuentes en
-                            nuestras acciones, cumplimos nuestras
-                            promesas y actuamos con honestidad, respeto y ética en cada oportunidad y escenario.</li>
-                        <li><strong><span class="theme_color">Orientación al Cliente:</span></strong> Trabajamos para
-                            entregar soluciones integrales que se
-                            transformen en relaciones rentables de largo plazo con los clientes. Hacemos del servicio un
-                            imperativo para traducir la satisfacción en lealtad.</li>
-                        <li><strong><span class="theme_color">Compromiso:</span></strong> Requerimos el involucramiento
-                            en cada una de las iniciativas que
-                            emprendemos, haciendo de la responsabilidad un concepto básico para lograr que las cosas
-                            sucedan
-                            de acuerdo a lo previsto.</li>
-                        <li><strong><span class="theme_color">Excelencia:</span></strong> Buscamos ejecutar nuestro
-                            trabajo de forma disciplinada, rigurosa y
-                            eficiente, haciendo del día a día una oportunidad para mejorar de forma continua nuestro
-                            desempeño, procesos, servicios y relación con nuestros clientes.</li>
-                        <li><strong><span class="theme_color"> Orientación a Resultados:</span></strong> Somos
-                            proactivos y perseverantes en el logro de los
-                            objetivos y metas establecidas, buscando que nuestro rendimiento se traduzca en aumentos de
-                            productividad y mejores resultados.</li>
-                    </ul>
+                <div class="project-info">
+                    <h3 class="project-title">Proyecto Cortinas Mall Zofri S.A</h3>
                 </div>
-                <div class="col-md-6">
-                    <img src="images/AcercaDe/integridad.png" alt="Imagen Principios">
+            </div>
+
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="images/trabajosRealizados/equiposRooftopHospitalIquique.png" alt="Proyecto Rooftop">
+                    <div class="image-overlay">
+                        <span class="view-text">Ver Imagen</span>
+                    </div>
+                </div>
+                <div class="project-info">
+                    <h3 class="project-title">Proyecto Equipos Rooftop Hospital Iquique</h3>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="images/trabajosRealizados/rooftopServiuIquique.png" alt="Proyecto Serviu">
+                    <div class="image-overlay">
+                        <span class="view-text">Ver Imagen</span>
+                    </div>
+                </div>
+                <div class="project-info">
+                    <h3 class="project-title">Proyecto Rooftop Serviu Iquique</h3>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="images/trabajosRealizados/RedinterSalaElectricaSierraGorda.png"
+                        alt="Proyecto Sierra Gorda">
+                    <div class="image-overlay">
+                        <span class="view-text">Ver Imagen</span>
+                    </div>
+                </div>
+                <div class="project-info">
+                    <h3 class="project-title">Redinter | Sala Electrica Sierra Gorda</h3>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="images/trabajosRealizados/splitCasseteVrvCajaLosAndes.png" alt="Proyecto Caja Los Andes">
+                    <div class="image-overlay">
+                        <span class="view-text">Ver Imagen</span>
+                    </div>
+                </div>
+                <div class="project-info">
+                    <h3 class="project-title">Proyecto Split Cassete VRV Caja Los Andes</h3>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="images/trabajosRealizados/splitMuroKalam.png" alt="Proyecto Muro Kalam">
+                    <div class="image-overlay">
+                        <span class="view-text">Ver Imagen</span>
+                    </div>
+                </div>
+                <div class="project-info">
+                    <h3 class="project-title">Proyecto Split Muro Kalam</h3>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="images/trabajosRealizados/splCamaraMantenimientoyCongelado.png"
+                        alt="Proyecto Cámara Mantenimiento">
+                    <div class="image-overlay">
+                        <span class="view-text">Ver Imagen</span>
+                    </div>
+                </div>
+                <div class="project-info">
+                    <h3 class="project-title">Spl Camara De Mantenimiento y Congelado</h3>
                 </div>
             </div>
         </div>
     </div>
-
-
-
-    <div class="section layout_padding about_bg">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6">
-                    <img src="images/AcercaDe/Captura de pantalla 2024-12-02 033209.png" alt="Imagen Misión"
-                        style="border-radius: 8px;">
-                </div>
-                <div class="col-md-6" style="margin-top: 2cm;">
-                    <div class="heading_main">
-                        <h2>Nuestra <span class="theme_color">Misión</span></h2>
-                    </div>
-                    <div class="content-centered">
-                        <p>
-                            Ser protagonista en el negocio MINERO, INDUSTRIAL Y RETAIL, contribuyendo al desarrollo de
-                            nuestros clientes a través de la ejecución de proyectos exitosos, basados en la calidad del
-                            servicio y sustentabilidad, con un equipo de trabajo comprometido con la excelencia, que se
-                            desempeña en un entorno que fomenta el desarrollo profesional y personal.
-                        </p>
-
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="section layout_padding about_bg">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6">
-                    <div class="vision-content">
-                        <div class="heading_main">
-                            <h2>Nuestra <span class="theme_color">Vision</span></h2>
-                        </div>
-                        <p>
-                            Somos una empresa de servicios integrales de <span class="theme_color">INGENIERÍA</span>,
-                            <span class="theme_color">MONTAJE Y MANTENIMIENTO</span>, orientada a satisfacer las
-                            necesidades de empresas <span class="theme_color">MINERAS</span>,<span
-                                class="theme_color">INDUSTRIALES</span> , <span class="theme_color">HOTELERA Y
-                                RETAIL</span>. <br><br> Nuestros clientes son
-                            empresas que ejecutan proyectos que contribuyen al desarrollo económico del país, que
-                            valoran la excelencia operacional, las relaciones de largo plazo y ética en los negocios.
-                            Creamos valor para nuestros clientes entregando soluciones eficientes que garantizan la
-                            seguridad, calidad y respeto al medio ambiente.
-                        </p>
-
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <img class="vision-img" src="images/AcercaDe/mujer.jpg" alt="Imagen Visión">
-                </div>
-            </div>
-        </div>
+    <div id="imageModal" class="modal">
+        <span class="close-btn">&times;</span>
+        <img class="modal-content" id="modalImage">
     </div>
 
     <!-- end section -->
 
-    <!-- end section -->
+    <style>
+        /* Modal styles */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.9);
+        }
+
+        .modal-content {
+            margin: auto;
+            display: block;
+            max-width: 90%;
+            max-height: 90vh;
+            margin-top: 50px;
+        }
+
+        .close-btn {
+            position: absolute;
+            right: 25px;
+            top: 15px;
+            color: #fff;
+            font-size: 35px;
+            font-weight: bold;
+            cursor: pointer;
+            z-index: 1001;
+        }
+
+        .close-btn:hover {
+            color: #ff6600;
+        }
+
+        .project-image {
+            aspect-ratio: 16 / 9;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .image-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .project-image:hover .image-overlay {
+            opacity: 1;
+        }
+
+        .view-text {
+            color: white;
+            font-size: 1.1rem;
+            padding: 10px 20px;
+            border: 2px solid white;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .view-text:hover {
+            background: white;
+            color: #ff6600;
+        }
+
+        /* Contenedor principal */
+        .projects-container {
+            padding: 60px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 40px;
+            color: #000000;
+            font-size: 2.5rem;
+            font-weight: bold;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 3px;
+            background-color: #ff6600;
+        }
+
+        /* Estilo del grid */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        /* Tarjetas de proyectos */
+        .project-card {
+            background: #fff;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Imagenes dentro de las tarjetas */
+        .project-image {
+            aspect-ratio: 16 / 9;
+            overflow: hidden;
+        }
+
+        .project-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .project-image:hover img {
+            transform: scale(1.05);
+        }
+
+        /* Información del proyecto */
+        .project-info {
+            padding: 10px 15px;
+            text-align: center;
+            background: #fff;
+            border-top: 1px solid #ddd;
+        }
+
+        .project-title {
+            font-size: 1rem;
+            font-weight: 500;
+            color: #222;
+            margin: 0;
+            text-transform: capitalize;
+        }
+
+        /* Responsividad */
+        @media (max-width: 768px) {
+            .projects-grid {
+                grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            }
+
+            .project-title {
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+
+    <script>
+        document.querySelectorAll('.project-image').forEach(card => {
+            card.addEventListener('click', () => {
+                const modal = document.getElementById('imageModal');
+                const modalImg = document.getElementById('modalImage');
+                const imgSrc = card.querySelector('img').src;
+
+                modal.style.display = "block";
+                modalImg.src = imgSrc;
+            });
+        });
+
+        document.querySelector('.close-btn').addEventListener('click', () => {
+            document.getElementById('imageModal').style.display = "none";
+        });
+
+        // Close modal when clicking outside the image
+        document.getElementById('imageModal').addEventListener('click', (e) => {
+            if (e.target === document.getElementById('imageModal')) {
+                document.getElementById('imageModal').style.display = "none";
+            }
+        });
+    </script>
+
     <!-- Start Footer -->
     <footer class="footer-box">
         <div class="container">
