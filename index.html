@@ -16,7 +16,8 @@
     <meta name="author" content="">
 
     <!-- Site Icons -->
-    <link rel="shortcut icon" href="images/Sunor.png" type="image/x-icon" />
+    <link rel="icon" href="images/Sunor.png" sizes="32x32" type="image/png">
+
     <link rel="apple-touch-icon" href="#" />
     <!--Carousel Import-->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
@@ -138,28 +139,61 @@
             padding: 0;
         }
 
-        /* Desktop First Approach */
+        /* Desktop First Approach (Pantallas grandes) */
+        .icon-ini-container {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 25px;
+            /* Aumenta el espacio entre íconos */
+            padding: 30px;
+        }
+
+        .icon-ini-button img {
+            width: 120px;
+            /* Aumenta significativamente el tamaño */
+            height: 120px;
+        }
+
+        .icon-ini-button p {
+            font-size: 18px;
+            /* Texto más grande */
+            font-weight: bold;
+            /* Más llamativo */
+            margin-top: 10px;
+        }
+
+        /* Pantallas medianas (992px a 1200px) */
         @media (max-width: 1200px) {
             .icon-ini-container {
-                grid-template-columns: repeat(5, 1fr);
+                grid-template-columns: repeat(4, 1fr);
+                /* Reduce las columnas */
+                gap: 20px;
+            }
+
+            .icon-ini-button img {
+                width: 100px;
+                /* Tamaño ligeramente menor */
+                height: 100px;
+            }
+
+            .icon-ini-button p {
+                font-size: 16px;
+                /* Texto ligeramente más pequeño */
+            }
+        }
+
+        /* Pantallas pequeñas (768px a 992px) */
+        @media (max-width: 992px) {
+            .icon-ini-container {
+                grid-template-columns: repeat(3, 1fr);
+                /* Reduce aún más las columnas */
+                padding: 20px;
                 gap: 15px;
             }
 
             .icon-ini-button img {
-                width: 70px;
-                height: 70px;
-            }
-        }
-
-        @media (max-width: 992px) {
-            .icon-ini-container {
-                grid-template-columns: repeat(3, 1fr);
-                padding: 20px 10px;
-            }
-
-            .icon-ini-button img {
-                width: 65px;
-                height: 65px;
+                width: 80px;
+                height: 80px;
             }
 
             .icon-ini-button p {
@@ -167,27 +201,24 @@
             }
         }
 
+        /* Pantallas muy pequeñas (480px a 768px) */
         @media (max-width: 768px) {
             .icon-ini-container {
                 grid-template-columns: repeat(2, 1fr);
                 gap: 10px;
             }
 
-            .icon-ini-button {
-                padding: 10px;
-            }
-
             .icon-ini-button img {
-                width: 55px;
-                height: 55px;
+                width: 70px;
+                height: 70px;
             }
 
             .icon-ini-button p {
-                font-size: 12px;
-                margin-top: 5px;
+                font-size: 13px;
             }
         }
 
+        /* Teléfonos (menos de 480px) */
         @media (max-width: 480px) {
             .icon-ini-container {
                 grid-template-columns: repeat(2, 1fr);
@@ -196,15 +227,17 @@
             }
 
             .icon-ini-button img {
-                width: 45px;
-                height: 45px;
+                width: 60px;
+                /* Mayor tamaño incluso en teléfonos */
+                height: 60px;
             }
 
             .icon-ini-button p {
-                font-size: 11px;
-                line-height: 1.2;
+                font-size: 12px;
+                line-height: 1.4;
             }
         }
+
 
         @media (max-width: 768px) {
             .footer-box .container {
@@ -338,10 +371,11 @@
             margin-top: 0;
             /* Elimina el margen superior innecesario */
         }
+
         .navbar {
             flex-wrap: wrap;
         }
-        
+
         .navbar-nav {
             display: flex;
             justify-content: space-between;
@@ -349,43 +383,42 @@
             margin: 0;
             padding: 0 15px;
         }
-        
+
         .nav-link {
             padding: 8px 12px;
             font-size: 15px;
             white-space: nowrap;
         }
-        
+
         @media (min-width: 992px) {
             .navbar-nav {
                 flex-wrap: nowrap;
             }
-            
+
             .nav-link {
                 padding: 8px 15px;
             }
         }
+
         .site_information ul {
             display: flex;
             align-items: center;
             flex-wrap: nowrap;
         }
-        
+
         .site_information ul li {
             display: inline-flex;
             align-items: center;
             margin-right: 15px;
         }
-        
+
         .site_information ul li:last-child {
             margin-right: 0;
         }
-        
+
         .site_information ul li img {
             margin-right: 5px;
         }
-        
-        
     </style>
 
 </head>
@@ -408,7 +441,7 @@
             <div class="container">
                 <div class="row">
                     <div class="logo_section">
-                        <a class="navbar-brand" href="index.html"><img src="/SunorPage/images/Sunor.png"
+                        <a class="navbar-brand" href="index.html"><img src="images/Nuevo logo sunor.png"
                                 alt="image"></a>
                     </div>
                     <div class="site_information">
@@ -417,8 +450,10 @@
                                         alt="#" />contacto@sunor.cl</a></li>
                             <li><a href="tel:exchang@gmail.com"><img src="images/phone_icon.png" alt="#" />57
                                     2716420</a></li>
-                            <li><a href="https://www.facebook.com/sunor.cl/"><img src="images/facebook.png"alt="https://www.facebook.com/sunor.cl/" /></a></li>
-                            <li><a href="https://www.instagram.com/sunor.cl/"><img src="images/instagram.png"alt="https://www.instagram.com/sunor.cl/" /></a></li>
+                            <li><a href="https://www.facebook.com/sunor.cl/"><img src="images/facebook.png"
+                                        alt="https://www.facebook.com/sunor.cl/" /></a></li>
+                            <li><a href="https://www.instagram.com/sunor.cl/"><img src="images/instagram.png"
+                                        alt="https://www.instagram.com/sunor.cl/" /></a></li>
 
                         </ul>
                     </div>
@@ -432,22 +467,25 @@
                     <div class="menu_orange_section" style="background: #ff880e;">
                         <nav class="navbar header-nav navbar-expand-lg">
                             <div class="menu_section">
-                                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-wd" aria-controls="navbar-wd" aria-expanded="false" aria-label="Toggle navigation">
+                                <button class="navbar-toggler" type="button" data-toggle="collapse"
+                                    data-target="#navbar-wd" aria-controls="navbar-wd" aria-expanded="false"
+                                    aria-label="Toggle navigation">
                                     <span class="navbar-toggler-icon"></span>
                                 </button>
-                                
+
                                 <div class="collapse navbar-collapse" id="navbar-wd">
                                     <ul class="navbar-nav">
                                         <li><a class="nav-link active" href="index.html">Inicio</a></li>
                                         <li><a class="nav-link" href="about.html">Acerca de nosotros</a></li>
-                                        <li><a class="nav-link" href="nuestrosProyectos.html">Nuestros Proyectos</a></li>
+                                        <li><a class="nav-link" href="nuestrosProyectos.html">Nuestros Proyectos</a>
+                                        </li>
                                         <li><a class="nav-link" href="services.html">Servicios</a></li>
                                         <li><a class="nav-link" href="productos.html">Productos</a></li>
                                         <li><a class="nav-link" href="contact.html">Contacto</a></li>
-                                        
+
                                     </ul>
                                 </div>
-                                
+
                             </div>
                         </nav>
                     </div>
@@ -463,11 +501,9 @@
         <div class="container-fluid">
             <div class="row">
                 <div class="pogoSlider" id="js-main-slider">
-                    <div class="pogoSlider-slide" style="background-image:url(images/pagina\ 1.jpg);">
+                    <div class="pogoSlider-slide" style="background-image:url(images/Pagina\ 1.jpeg);">
                         <div class="container">
-                            <div class="row">
 
-                            </div>
                         </div>
                     </div>
                     <div class="pogoSlider-slide" style="background-image:url(images/pagina\ 3.jpg);">
@@ -482,7 +518,6 @@
             </div>
         </div>
     </div>
-    <!-- End Banner -->
 
     <!-- section -->
 
@@ -605,9 +640,11 @@
                         </div>
                     </div>
                     <div class="full paddding_left_15">
-                        <p>En Sunor, nos enorgullece transformar espacios en lugares de confort, seguridad y bienestar a
+                        <p>En Sunor, nos enorgullece transformar espacios en lugares de confort, seguridad y
+                            bienestar a
                             través de soluciones de climatización personalizadas y sistemas contra incendio. Cada
-                            proyecto que emprendemos es una oportunidad para demostrar nuestra experiencia, calidad y
+                            proyecto que emprendemos es una oportunidad para demostrar nuestra experiencia, calidad
+                            y
                             compromiso con nuestros clientes. </p>
 
                         <p> Descubre cómo hemos llevado tecnología de punta y diseño eficiente a hogares, oficinas,
@@ -650,7 +687,8 @@
                 <div class="slide"><img src="images/clientes/logo-Kalam-256-Trans-256.png" alt="Kalam"></div>
                 <div class="slide"><img src="images/clientes/Logo-servipag.png" alt="Servipag"></div>
                 <div class="slide"><img src="images/clientes/logo-spl-blanco.png" alt="SPL"></div>
-                <div class="slide"><img src="images/clientes/Logotipo_Caja_Los_Andes.png" alt="Caja Los Andes"></div>
+                <div class="slide"><img src="images/clientes/Logotipo_Caja_Los_Andes.png" alt="Caja Los Andes">
+                </div>
                 <div class="slide"><img src="images/clientes/mutual de seguros de chile.jpg" alt="Mutual de Seguros">
                 </div>
                 <div class="slide"><img src="images/clientes/serviu.png" alt="Serviu"></div>
@@ -669,7 +707,8 @@
                 <div class="slide"><img src="images/clientes/logo-Kalam-256-Trans-256.png" alt="Kalam"></div>
                 <div class="slide"><img src="images/clientes/Logo-servipag.png" alt="Servipag"></div>
                 <div class="slide"><img src="images/clientes/logo-spl-blanco.png" alt="SPL"></div>
-                <div class="slide"><img src="images/clientes/Logotipo_Caja_Los_Andes.png" alt="Caja Los Andes"></div>
+                <div class="slide"><img src="images/clientes/Logotipo_Caja_Los_Andes.png" alt="Caja Los Andes">
+                </div>
                 <div class="slide"><img src="images/clientes/mutual de seguros de chile.jpg" alt="Mutual de Seguros">
                 </div>
                 <div class="slide"><img src="images/clientes/serviu.png" alt="Serviu"></div>

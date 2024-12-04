@@ -1,16 +1,10 @@
-// Inicializar EmailJS con tu User ID
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
     emailjs.init('ECOp68bJKsmYRN75I');
 
     const sendButton = document.getElementById('sendButton');
-    const clearButton = document.getElementById('clearButton');
     const cotizacionForm = document.getElementById('cotizacionForm');
-    const exampleModal = document.getElementById('exampleModal');
     const productNameInput = document.getElementById('product_name');
-    const categoryFilter = document.getElementById('categoryFilter');
-    const productContainer = document.getElementById('productContainer');
 
-    // Validar el formulario
     function validateEmail(email) {
         const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         return regex.test(email);
@@ -36,51 +30,35 @@ document.addEventListener("DOMContentLoaded", function() {
         return true;
     }
 
-    // Evento de envío
     if (sendButton) {
         sendButton.addEventListener('click', () => {
             if (!validateForm()) return;
-
+    
             sendButton.textContent = 'Enviando...';
-
-            emailjs.sendForm('default_service', 'template_11b4txw', cotizacionForm)
+    
+            const templateParams = {
+                to_name: "Admin", // Recipient name
+                from_email: document.getElementById('message_id').value,
+                from_name: document.getElementById('from_name').value,
+                product_name: document.getElementById('product_name').value,
+                message: document.getElementById('message').value,
+                reply_to: document.getElementById('message_id').value
+            };
+    
+            emailjs.send('default_service', 'template_11b4txw', templateParams)
                 .then(() => {
                     alert('¡La solicitud de cotización se creó con éxito!');
                     cotizacionForm.reset();
                     productNameInput.value = '';
                     sendButton.textContent = 'Enviar Mensaje';
-                }, (err) => {
-                    alert('Error al enviar: ' + JSON.stringify(err));
+                })
+                .catch((err) => {
+                    console.error('Error al enviar:', err);
+                    alert('Error al enviar el correo. Por favor, intenta nuevamente.');
                     sendButton.textContent = 'Enviar Mensaje';
                 });
         });
     }
-
-    document.addEventListener("DOMContentLoaded", function() {
-        const exampleModal = document.getElementById('exampleModal');
-        
-        if (exampleModal) {
-            exampleModal.addEventListener('show.bs.modal', function(event) {
-                const button = event.relatedTarget;
-                const productName = button.getAttribute('data-bs-whatever');
-                const productDescription = button.getAttribute('data-bs-description');
-                
-                const modalTitle = exampleModal.querySelector('.modal-title');
-                const productNameElement = exampleModal.querySelector('#productName');
-                const productDescriptionElement = exampleModal.querySelector('#productDescription');
-                
-                modalTitle.textContent = 'Detalles del Producto';
-                productNameElement.textContent = productName;
-                productDescriptionElement.textContent = productDescription;
-            });
-        }
-    });
-    
     
     
 });
-
-
-
-
-
