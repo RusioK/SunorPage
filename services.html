@@ -378,6 +378,53 @@
                 padding: 15px;
             }
         }
+        .navbar {
+            flex-wrap: wrap;
+        }
+        
+        .navbar-nav {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            margin: 0;
+            padding: 0 15px;
+        }
+        
+        .nav-link {
+            padding: 8px 12px;
+            font-size: 15px;
+            white-space: nowrap;
+        }
+        
+        @media (min-width: 992px) {
+            .navbar-nav {
+                flex-wrap: nowrap;
+            }
+            
+            .nav-link {
+                padding: 8px 15px;
+            }
+        }
+        .site_information ul {
+            display: flex;
+            align-items: center;
+            flex-wrap: nowrap;
+        }
+        
+        .site_information ul li {
+            display: inline-flex;
+            align-items: center;
+            margin-right: 15px;
+        }
+        
+        .site_information ul li:last-child {
+            margin-right: 0;
+        }
+        
+        .site_information ul li img {
+            margin-right: 5px;
+        }
+        
     </style>
 </head>
 
@@ -406,10 +453,10 @@
                         <ul>
                             <li><a href="mailto:exchang@gmail.com"><img src="images/mail_icon.png"
                                         alt="#" />contacto@sunor.cl</a></li>
-                            <li><a href="tel:exchang@gmail.com"><img src="images/phone_icon.png" alt="#" />+56 57
+                            <li><a href="tel:exchang@gmail.com"><img src="images/phone_icon.png" alt="#" />57
                                     2716420</a></li>
-                            <li><a href="https://www.facebook.com/sunor.cl/"><img src="images/facebook.png"
-                                        alt="https://www.facebook.com/sunor.cl/" /></a></li>
+                            <li><a href="https://www.facebook.com/sunor.cl/"><img src="images/facebook.png"alt="https://www.facebook.com/sunor.cl/" /></a></li>
+                            <li><a href="https://www.instagram.com/sunor.cl/"><img src="images/instagram.png"alt="https://www.instagram.com/sunor.cl/" /></a></li>
 
                         </ul>
                     </div>
@@ -423,29 +470,29 @@
                     <div class="menu_orange_section" style="background: #ff880e;">
                         <nav class="navbar header-nav navbar-expand-lg">
                             <div class="menu_section">
-                                <button class="navbar-toggler" type="button" data-toggle="collapse"
-                                    data-target="#navbar-wd" aria-controls="navbar-wd" aria-expanded="false"
-                                    aria-label="Toggle navigation">
-                                    <span></span>
-                                    <span></span>
-                                    <span></span>
+                                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-wd" aria-controls="navbar-wd" aria-expanded="false" aria-label="Toggle navigation">
+                                    <span class="navbar-toggler-icon"></span>
                                 </button>
-                                <div class="collapse navbar-collapse justify-content-end" id="navbar-wd">
+                                
+                                <div class="collapse navbar-collapse" id="navbar-wd">
                                     <ul class="navbar-nav">
-                                        <li><a class="nav-link " href="index.html">Inicio</a></li>
+                                        <li><a class="nav-link" href="index.html">Inicio</a></li>
                                         <li><a class="nav-link" href="about.html">Acerca de nosotros</a></li>
+                                        <li><a class="nav-link" href="nuestrosProyectos.html">Nuestros Proyectos</a></li>
                                         <li><a class="nav-link active" href="services.html">Servicios</a></li>
                                         <li><a class="nav-link" href="productos.html">Productos</a></li>
                                         <li><a class="nav-link" href="contact.html">Contacto</a></li>
+                                        
                                     </ul>
                                 </div>
+                                
                             </div>
                         </nav>
-
                     </div>
                 </div>
             </div>
         </div>
+
 
     </header>
     <!-- End header -->
@@ -549,7 +596,7 @@
             <!-- Contenido de Sistemas Contra Incendios -->
             <div id="incendios" class="gallery-content" style="margin-top: 2cm;">
                 <div class="service-category">
-                    <h2>Residencial</h2>
+                    <h2>Extincion</h2>
                     <div class="service-details">
                         <div class="service-image">
                             <img src="images/Servicios/Extintores.png" alt="Residencial">
@@ -565,7 +612,7 @@
                 </div>
 
                 <div class="service-category">
-                    <h2>Comercial</h2>
+                    <h2>Deteccion</h2>
                     <div class="service-details">
                         <div class="service-image">
                             <img src="images/Servicios/aspersores.png" alt="Comercial">

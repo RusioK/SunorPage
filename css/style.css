@@ -712,6 +712,7 @@ a.navbar-brand {
     font-weight: 500;
 }
 
+
 .paddding_left_15 {
 	padding-left: 15px;
 }
@@ -952,6 +953,31 @@ a.navbar-brand {
 }
 
 .inner_page_banners h3 {
+    font-size: 48px;
+    color: #fff;
+    padding: 40px 15px;
+    text-align: center;
+    margin-top: 200px;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.inner_page_bannerss {
+    float: left;
+    width: 100%;
+    padding-top: 60px;
+    height: 600px;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../images/productos/portadaProductos.jpg");
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.inner_page_bannerss h3 {
     font-size: 48px;
     color: #fff;
     padding: 40px 15px;

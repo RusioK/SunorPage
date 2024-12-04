@@ -126,7 +126,7 @@
             /* Bordes redondeados */
             margin-right: 10px;
         }
-
+  
         .icon-wrapper img {
             width: 20px;
             /* Tamaño del ícono */
@@ -139,6 +139,53 @@
             flex-shrink: 0;
             /* Previene que el ícono se reduzca de tamaño */
         }
+        .navbar {
+            flex-wrap: wrap;
+        }
+        
+        .navbar-nav {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            margin: 0;
+            padding: 0 15px;
+        }
+        
+        .nav-link {
+            padding: 8px 12px;
+            font-size: 15px;
+            white-space: nowrap;
+        }
+        
+        @media (min-width: 992px) {
+            .navbar-nav {
+                flex-wrap: nowrap;
+            }
+            
+            .nav-link {
+                padding: 8px 15px;
+            }
+        }
+        .site_information ul {
+            display: flex;
+            align-items: center;
+            flex-wrap: nowrap;
+        }
+        
+        .site_information ul li {
+            display: inline-flex;
+            align-items: center;
+            margin-right: 15px;
+        }
+        
+        .site_information ul li:last-child {
+            margin-right: 0;
+        }
+        
+        .site_information ul li img {
+            margin-right: 5px;
+        }
+        
     </style>
 </head>
 
@@ -157,16 +204,18 @@
             <div class="container">
                 <div class="row">
                     <div class="logo_section">
-                        <a class="navbar-brand" href="index.html"><img src="/SunorPage/images/Sunor.png" alt="image"></a>
+                        <a class="navbar-brand" href="index.html"><img src="/SunorPage/images/Sunor.png"
+                                alt="image"></a>
                     </div>
                     <div class="site_information">
                         <ul>
-                            <li><a href="mailto:contacto@sunor.cl"><img src="images/mail_icon.png"
+                            <li><a href="mailto:exchang@gmail.com"><img src="images/mail_icon.png"
                                         alt="#" />contacto@sunor.cl</a></li>
-                            <li><a href="tel:+56 57 2716420"><img src="images/phone_icon.png" alt="#" />+56 57
+                            <li><a href="tel:exchang@gmail.com"><img src="images/phone_icon.png" alt="#" />57
                                     2716420</a></li>
-                            <li><a href="https://www.facebook.com/sunor.cl/"><img src="images/facebook.png"
-                                        alt="Facebook" /></a></li>
+                            <li><a href="https://www.facebook.com/sunor.cl/"><img src="images/facebook.png"alt="https://www.facebook.com/sunor.cl/" /></a></li>
+                            <li><a href="https://www.instagram.com/sunor.cl/"><img src="images/instagram.png"alt="https://www.instagram.com/sunor.cl/" /></a></li>
+
                         </ul>
                     </div>
                 </div>
@@ -178,29 +227,29 @@
                     <div class="menu_orange_section" style="background: #ff880e;">
                         <nav class="navbar header-nav navbar-expand-lg">
                             <div class="menu_section">
-                                <button class="navbar-toggler" type="button" data-toggle="collapse"
-                                    data-target="#navbar-wd" aria-controls="navbar-wd" aria-expanded="false"
-                                    aria-label="Toggle navigation">
-                                    <span></span>
-                                    <span></span>
-                                    <span></span>
+                                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-wd" aria-controls="navbar-wd" aria-expanded="false" aria-label="Toggle navigation">
+                                    <span class="navbar-toggler-icon"></span>
                                 </button>
-                                <div class="collapse navbar-collapse justify-content-end" id="navbar-wd">
+                                
+                                <div class="collapse navbar-collapse" id="navbar-wd">
                                     <ul class="navbar-nav">
-                                        <li><a class="nav-link " href="index.html">Inicio</a></li>
+                                        <li><a class="nav-link" href="index.html">Inicio</a></li>
                                         <li><a class="nav-link" href="about.html">Acerca de nosotros</a></li>
+                                        <li><a class="nav-link" href="nuestrosProyectos.html">Nuestros Proyectos</a></li>
                                         <li><a class="nav-link" href="services.html">Servicios</a></li>
                                         <li><a class="nav-link" href="productos.html">Productos</a></li>
                                         <li><a class="nav-link active" href="contact.html">Contacto</a></li>
+                                        
                                     </ul>
                                 </div>
+                                
                             </div>
                         </nav>
-
                     </div>
                 </div>
             </div>
         </div>
+
     </header>
     <!-- End header -->
 
@@ -227,22 +276,28 @@
                 <form id="form" class="contactForm">
                     <div class="row">
                         <div class="col-md-12 mb-3">
-                            <input type="text" id="to_names" class="form-control" placeholder="Nombre*" name="to_names" required>
+                            <input type="text" id="to_names" class="form-control" placeholder="Nombre*" name="to_names"
+                                required>
                         </div>
                         <div class="col-md-12 mb-3">
-                            <input type="email" id="message_ide" class="form-control" placeholder="Email*" name="message_ide" required>
+                            <input type="email" id="message_ide" class="form-control" placeholder="Email*"
+                                name="message_ide" required>
                         </div>
                         <div class="col-md-12 mb-3">
-                            <input type="text" id="nameEmpresa" class="form-control" placeholder="Nombre de la empresa*" name="nameEmpresa" required>
+                            <input type="text" id="nameEmpresa" class="form-control" placeholder="Nombre de la empresa*"
+                                name="nameEmpresa" required>
                         </div>
                         <div class="col-md-12 mb-3">
-                            <input type="text" id="ciudad" class="form-control" placeholder="Ciudad*" name="ciudad" required>
+                            <input type="text" id="ciudad" class="form-control" placeholder="Ciudad*" name="ciudad"
+                                required>
                         </div>
                         <div class="col-md-12 mb-3">
-                            <input type="tel" id="telefono" class="form-control" placeholder="Teléfono* (ej: +569XXXXXXXX)" name="telefono" required>
+                            <input type="tel" id="telefono" class="form-control"
+                                placeholder="Teléfono* (ej: +569XXXXXXXX)" name="telefono" required>
                         </div>
                     </div>
-                    <textarea id="messages" class="form-control mb-3" placeholder="Mensaje*" name="messages" rows="5" required></textarea>
+                    <textarea id="messages" class="form-control mb-3" placeholder="Mensaje*" name="messages" rows="5"
+                        required></textarea>
                     <button type="submit" id="button" class="custom-button">Enviar</button>
                 </form>
                 <div id="alert" style="display: none; padding: 15px; margin: 10px 0; border-radius: 5px;"></div>
@@ -258,12 +313,14 @@
                 <div class="contact-info">
                     <h3>Información de Contacto</h3>
                     <ul>
-                        <li><span class="icon-wrapper"><img src="images/i5.png" alt="Dirección"></span> Calle Via Tres
-                            2670, Iquique, Chile</li>
-                        <li><span class="icon-wrapper"><img src="images/i6.png" alt="Email"></span> contacto@sunor.cl
                         </li>
-                        <li><span class="icon-wrapper"><img src="images/i7.png" alt="Teléfono"></span> +569-56589321
-                        </li>
+
+                            <li><span class="icon-wrapper"><img src="images/i5.png" alt="Dirección"></span> Calle Via Tres
+                                2670, Iquique, Chile</li>
+                            <li><span class="icon-wrapper"><img src="images/i5.png" alt="Teléfono"></span> Disponible Antofagasta / Arica y Parinacota</li>
+                            <li><span class="icon-wrapper"><img src="images/i6.png" alt="Email"></span> contacto@sunor.cl</li>
+                            <li><span class="icon-wrapper"><img src="images/i7.png" alt="Teléfono"></span> +569-56589321</li>
+
                     </ul>
                 </div>
             </div>
