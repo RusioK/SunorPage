@@ -30,7 +30,7 @@
     <link rel="stylesheet" href="https://www.sunor.cl/css/responsive.css" />
 
 
-  
+
 
 
     <style>
@@ -412,6 +412,80 @@
         .site_information ul li img {
             margin-right: 5px;
         }
+
+        /* Pantallas medianas (tablets, entre 768px y 992px) */
+        @media (max-width: 992px) {
+            .footer-box .row {
+                flex-direction: column;
+            }
+
+            .footer-box .col-sm-6 {
+                width: 100%;
+                margin-bottom: 20px;
+            }
+
+            .icon-ini-container {
+                grid-template-columns: repeat(3, 1fr);
+                gap: 15px;
+            }
+
+            .icon-ini-button img {
+                width: 80px;
+                height: 80px;
+            }
+        }
+
+        /* Pantallas pequeñas (entre 480px y 768px) */
+        @media (max-width: 768px) {
+            .footer-box .row {
+                flex-direction: column;
+            }
+
+            .footer-box h3 {
+                font-size: 18px;
+                text-align: center;
+            }
+
+            .footer-box ul li span {
+                font-size: 14px;
+            }
+
+            .icon-ini-container {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 10px;
+            }
+
+            .icon-ini-button img {
+                width: 70px;
+                height: 70px;
+            }
+        }
+
+        /* Pantallas muy pequeñas (teléfonos, menos de 480px) */
+        @media (max-width: 480px) {
+            .footer-box {
+                text-align: center;
+                padding: 10px;
+            }
+
+            .footer-box h3 {
+                font-size: 16px;
+            }
+
+            .footer-box ul li {
+                text-align: center;
+            }
+
+            .icon-ini-container {
+                grid-template-columns: 1fr;
+                gap: 8px;
+            }
+
+            .icon-ini-button img {
+                width: 60px;
+                height: 60px;
+            }
+        }
     </style>
 
 </head>
@@ -517,14 +591,14 @@
             <img src="images/iconosServicio/Icono-02.png" alt="Icono de climatización">
             <p>Climatización <br> Industrial</p>
         </a>
-        
-        
+
+
 
         <a href="services.html#incendios" class="icon-ini-button">
             <img src="images/iconosServicio/Icono-03.png" alt="Icono de incendios">
             <p>Sistemas <br> Contra Incendios</p>
         </a>
-        
+
 
         <a href="productos.html" class="icon-ini-button">
             <img src="images/iconosServicio/refrigeracion ventilacion.png" alt="Icono de Refrigeracion Ventilacion">
@@ -561,7 +635,7 @@
         </div>
     </div>
 
-        
+
     <!-- end section -->
     <!-- section -->
     <div class="section layout_padding">
@@ -886,7 +960,7 @@
         <script src="https://www.sunor.cl/js/isotope.min.js"></script>
         <script src="https://www.sunor.cl/js/images-loded.min.js"></script>
         <script src="https://www.sunor.cl/js/custom.js"></script>
- 
+
 
 </body>
 
