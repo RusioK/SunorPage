@@ -4,14 +4,14 @@ console.log('Productos.js loaded');
 //Productos
 const products = [
 
-      /*Climatizacion_Industrial*/
+    /*Climatizacion_Industrial*/
     {
         id: 1,
         name: 'Chiller ',
         category: 'climatizacion_Industrial',
         description: 'El equipo “chiller” es un sistema de enfriamiento de alta capacidad, ideal para aplicaciones comerciales, industriales y edificios de gran envergadura que requieren control de temperatura eficiente y constante, como fábricas, hospitales, hoteles y centros comerciales. Funcionando mediante un circuito de agua fría que circula a través de intercambiadores de calor, el chiller distribuye aire acondicionado de forma uniforme, permitiendo mantener un clima óptimo en amplias áreas o procesos industriales.',
         image: 'images/productos/FullPOWER-VFD-TCAITZ-2565-768x768.png',
-        marca: ['images/marcas/ANWO.png','images/marcas/rhoss-logo.jpg']
+        marca: ['images/marcas/ANWO.png', 'images/marcas/rhoss-logo.jpg']
     },
     {
         id: 2,
@@ -87,7 +87,7 @@ const products = [
         category: 'climatizacion_Residencial',
         description: 'El aire acondicionado tipo ventana es una solución práctica y asequible para climatizar habitaciones, oficinas pequeñas o locales comerciales de tamaño reducido. Con un diseño compacto en una sola unidad, se instala fácilmente en una ventana o en el muro, ofreciendo una distribución directa y eficiente del aire. Ideal para quienes buscan confort y frescura en espacios pequeños sin complicaciones de instalación.',
         image: 'images/productos/portatil.png',
-        marca: ['images/marcas/ANWO.png', 'images/marcas/CLARK.jpg']     
+        marca: ['images/marcas/ANWO.png', 'images/marcas/CLARK.jpg']
     }
 
 
@@ -154,7 +154,7 @@ function renderProducts() {
             </div>`;
         productList.insertAdjacentHTML('beforeend', productHTML);
     });
-    
+
     if (paginatedProducts.length === 0) {
         productList.innerHTML = '<p class="text-center">No hay productos disponibles en esta categoría.</p>';
     }
@@ -248,5 +248,15 @@ document.addEventListener('DOMContentLoaded', function () {
         filterProducts(category); // Aplicar filtro automáticamente si hay categoría
     } else {
         filterProducts('all'); // Mostrar todos los productos si no hay categoría
+    }
+});
+document.addEventListener('DOMContentLoaded', function () {
+    const hash = window.location.hash.substring(1); // Obtén el hash sin #
+    console.log('Hash detectado:', hash);
+
+    if (hash) {
+        filterProducts(hash); // Llama a filterProducts con el hash como categoría
+    } else {
+        filterProducts('all'); // Mostrar todos los productos si no hay hash
     }
 });
