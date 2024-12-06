@@ -448,16 +448,16 @@
                 const modal = document.getElementById('imageModal');
                 const modalImg = document.getElementById('modalImage');
                 const imgSrc = card.querySelector('img').src;
-    
+
                 modal.style.display = "flex"; // Usar "flex" para centrar el modal
                 modalImg.src = imgSrc;
             });
         });
-    
+
         document.querySelector('.close-btn').addEventListener('click', () => {
             document.getElementById('imageModal').style.display = "none";
         });
-    
+
         // Cierra el modal al hacer clic fuera de la imagen
         document.getElementById('imageModal').addEventListener('click', (e) => {
             if (e.target === document.getElementById('imageModal')) {
@@ -479,7 +479,7 @@
                         </div>
                         <div class="col-sm-6 col-md-6 col-lg-3">
                             <div class="full">
-                                <h3>Apartados</h3>
+                                <h3 style="margin-top: 36px;">Apartados</h3>
                             </div>
                             <div class="full">
                                 <ul class="navbar-nav">
@@ -503,13 +503,39 @@
                             </div>
                         </div>
 
+                        <style>
+                            .custom-btn {
+                                display: inline-block;
+                                background-color: #ffffff;
+                                /* Blanco */
+                                color: #ff6600;
+                                /* Naranja */
+                                text-decoration: none;
+                                padding: 10px 20px;
+                                border-radius: 30px;
+                                font-weight: bold;
+                                font-size: 16px;
+                                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+                                transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+                            }
 
+                            .custom-btn:hover {
+                                background-color: #ff6600;
+                                /* Naranja */
+                                color: #ffffff;
+                                /* Blanco */
+                                transform: scale(1.05);
+                                /* Efecto de zoom */
+                                box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+                            }
+                        </style>
                         <div class="col-sm-6 col-md-6 col-lg-3">
                             <div class="full">
                                 <div class="footer_blog full white_fonts">
                                     <h3>Informacion de contacto</h3>
                                     <ul class="full">
-                                        <li><img src="images/i5.png"><span>Casa Matriz, Calle Via Tres 2670 Iquique Chile</span>
+                                        <li><img src="images/i5.png"><span>Casa Matriz, Calle Via Tres 2670 Iquique
+                                                Chile</span>
                                         </li>
                                         <li><img src="images/i6.png"><span>Contacto@sunor.cl</span></li>
                                         <li><img src="images/i7.png"><span>+569-56589321</span></li>

@@ -413,77 +413,92 @@
             margin-right: 5px;
         }
 
-        /* Pantallas medianas (tablets, entre 768px y 992px) */
+     
+       
+ /* Ajustes para pantallas medianas (tablets entre 768px y 992px) */
         @media (max-width: 992px) {
+            .row {
+                margin: 0 auto;
+                /* Centra el contenido horizontalmente */
+              
+            }
+
             .footer-box .row {
+                display: flex;
                 flex-direction: column;
-            }
-
-            .footer-box .col-sm-6 {
-                width: 100%;
-                margin-bottom: 20px;
-            }
-
-            .icon-ini-container {
-                grid-template-columns: repeat(3, 1fr);
-                gap: 15px;
-            }
-
-            .icon-ini-button img {
-                width: 80px;
-                height: 80px;
-            }
-        }
-
-        /* Pantallas pequeñas (entre 480px y 768px) */
-        @media (max-width: 768px) {
-            .footer-box .row {
-                flex-direction: column;
-            }
-
-            .footer-box h3 {
-                font-size: 18px;
-                text-align: center;
-            }
-
-            .footer-box ul li span {
-                font-size: 14px;
-            }
-
-            .icon-ini-container {
-                grid-template-columns: repeat(2, 1fr);
+                /* Organiza los elementos en una columna */
                 gap: 10px;
-            }
-
-            .icon-ini-button img {
-                width: 70px;
-                height: 70px;
-            }
-        }
-
-        /* Pantallas muy pequeñas (teléfonos, menos de 480px) */
-        @media (max-width: 480px) {
-            .footer-box {
-                text-align: center;
-                padding: 10px;
+                /* Añade espacio uniforme entre elementos */
             }
 
             .footer-box h3 {
                 font-size: 16px;
+                /* Reduce tamaño del encabezado */
+                text-align: center;
+                /* Centra el texto */
+            }
+        }
+
+        /* Ajustes para pantallas pequeñas (smartphones entre 480px y 768px) */
+        @media (max-width: 768px) {
+            .row {
+           
+                margin-bottom: 10px;
+                /* Ajusta el espacio inferior */
+            }
+
+            .footer-box .row>div {
+                width: 100%;
+                /* Forza el ancho al 100% */
+                padding: 0 5px;
+                /* Agrega un padding uniforme */
+            }
+
+            .footer-box ul {
+                padding: 0;
+                /* Quita padding interno */
+                margin: 0;
+                /* Quita márgenes adicionales */
+                text-align: center;
+                /* Centra los elementos */
             }
 
             .footer-box ul li {
+                margin-bottom: 8px;
+                /* Espaciado vertical entre ítems */
+                font-size: 13px;
+                /* Reduce el tamaño de la fuente */
+            }
+
+            .footer_blog {
                 text-align: center;
+                /* Centra el contenido */
+            }
+        }
+        /* Ajustes para pantallas muy pequeñas (menos de 480px) */
+        @media (max-width: 480px) {
+            .row {
+                flex-direction: column;
+                /* Cambia la dirección a vertical */
+                gap: 5px;
+                /* Reduce la separación entre elementos */
+                margin: 0 auto;
+                /* Centra todo el contenido */
+         
             }
 
-            .icon-ini-container {
-                grid-template-columns: 1fr;
-                gap: 8px;
+            .footer-box h3 {
+                font-size: 14px;
+                /* Reduce el tamaño del texto */
+                margin-bottom: 5px;
+                /* Reduce margen inferior */
             }
 
-            .icon-ini-button img {
-                width: 60px;
-                height: 60px;
+            .footer-box ul li {
+                font-size: 12px;
+                /* Reduce el tamaño de la fuente */
+                margin-bottom: 5px;
+                /* Ajusta el espacio entre ítems */
             }
         }
     </style>
@@ -888,7 +903,7 @@
                             </div>
                             <div class="col-sm-6 col-md-6 col-lg-3">
                                 <div class="full">
-                                    <h3>Apartados</h3>
+                                    <h3 style="margin-top: 36px;">Apartados</h3>
                                 </div>
                                 <div class="full">
                                     <ul class="navbar-nav">
@@ -911,7 +926,7 @@
                                     </div>
                                 </div>
                             </div>
-
+                            <style></style>
 
                             <div class="col-sm-6 col-md-6 col-lg-3">
                                 <div class="full">
