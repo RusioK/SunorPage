@@ -336,10 +336,7 @@ button:focus {
 	outline: none;
 }
 
-.form-control::-moz-placeholder {
-	color: #ffffff;
-	opacity: 1;
-}
+
 
 
 /*------------------------------------------------------------------ 
