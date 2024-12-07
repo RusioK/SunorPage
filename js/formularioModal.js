@@ -1,6 +1,4 @@
 document.addEventListener("DOMContentLoaded", function () {
-    emailjs.init('GFR56TeZVzbqsaCWm');
-
     const sendButton = document.getElementById('sendButton');
     const cotizacionForm = document.getElementById('cotizacionForm');
     const productNameInput = document.getElementById('product_name');
@@ -31,34 +29,46 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     if (sendButton) {
-        sendButton.addEventListener('click', () => {
+        sendButton.addEventListener('click', (event) => {
+            event.preventDefault();
+
             if (!validateForm()) return;
-    
+
             sendButton.textContent = 'Enviando...';
-    
-            const templateParams = {
-                to_name: "Admin", // Recipient name
-                from_email: document.getElementById('message_id').value,
-                from_name: document.getElementById('from_name').value,
-                product_name: document.getElementById('product_name').value,
-                message: document.getElementById('message').value,
-                reply_to: document.getElementById('message_id').value
+            sendButton.disabled = true;
+
+            const data = {
+                fromName: document.getElementById('from_name').value.trim(),
+                messageId: document.getElementById('message_id').value.trim(),
+                productName: document.getElementById('product_name').value.trim(),
+                message: document.getElementById('message').value.trim()
             };
-    
-            emailjs.send('service_v46ywoh', 'template_a25hx9f', templateParams)
-                .then(() => {
-                    alert('¡La solicitud de cotización se creó con éxito!');
-                    cotizacionForm.reset();
-                    productNameInput.value = '';
-                    sendButton.textContent = 'Enviar Mensaje';
+
+            // Enviar datos al backend usando fetch
+            fetch("http://localhost:3000/api/cotizar", { // Cambia localhost por tu dominio si está en producción
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify(data)
+            })
+                .then((response) => {
+                    if (response.ok) {
+                        alert('¡La solicitud de cotización se creó con éxito!');
+                        cotizacionForm.reset(); // Limpia el formulario
+                        productNameInput.value = ''; // Limpia el campo de producto
+                    } else {
+                        return response.json().then((err) => {
+                            alert(`Error al enviar la cotización: ${err.error}`);
+                        });
+                    }
                 })
                 .catch((err) => {
-                    console.error('Error al enviar:', err);
-                    alert('Error al enviar el correo. Por favor, intenta nuevamente.');
+                    console.error('Error al enviar la cotización:', err);
+                    alert('Ocurrió un error inesperado. Por favor, inténtalo nuevamente.');
+                })
+                .finally(() => {
                     sendButton.textContent = 'Enviar Mensaje';
+                    sendButton.disabled = false;
                 });
         });
     }
-    
-    
 });

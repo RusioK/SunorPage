@@ -1,15 +1,8 @@
 document.addEventListener("DOMContentLoaded", function () {
-    try {
-        emailjs.init("GFR56TeZVzbqsaCWm"); // Reemplaza con tu User ID
-        console.log("EmailJS inicializado correctamente.");
-    } catch (error) {
-        console.error("Error al inicializar EmailJS:", error);
-    }
-
     const sendButton = document.getElementById("sendButton");
     const cotizacionForm = document.getElementById("cotizacionForm");
     const cotizacionModal = document.getElementById("cotizacionModal");
-    const productNameInput = document.getElementById("product_name"); // Campo del formulario que mostrará el nombre del producto
+    const productNameInput = document.getElementById("product_name");
     const exampleModal = document.getElementById("exampleModal");
 
     // Validar el formulario
@@ -17,7 +10,7 @@ document.addEventListener("DOMContentLoaded", function () {
         const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         return regex.test(email);
     }
-    // Validar el formulario
+
     function validateForm() {
         const fromName = document.getElementById("from_name")?.value.trim();
         const messageId = document.getElementById("message_id")?.value.trim();
@@ -52,35 +45,67 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Evento de envío del formulario
     if (sendButton) {
-        sendButton.addEventListener("click", () => {
+        sendButton.addEventListener("click", (event) => {
+            event.preventDefault(); // Evitar recargar la página
+
             if (!validateForm()) return;
 
             sendButton.textContent = "Enviando...";
+            sendButton.disabled = true;
 
-            emailjs
-                .sendForm("service_v46ywoh", "template_a25hx9f", cotizacionForm)
-                .then(() => {
-                    Swal.fire({
-                        icon: "success",
-                        title: "¡Enviado!",
-                        text: "La solicitud de cotización se creó con éxito.",
-                    }).then(() => {
-                        // Cerrar el modal después de la confirmación
-                        const bootstrapModal = bootstrap.Modal.getInstance(cotizacionModal);
-                        if (bootstrapModal) bootstrapModal.hide();
-                    });
+            const data = {
+                fromName: document.getElementById("from_name")?.value.trim(),
+                messageId: document.getElementById("message_id")?.value.trim(),
+                productName: document.getElementById("product_name")?.value.trim(),
+                message: document.getElementById("message")?.value.trim(),
+            };
 
-                    cotizacionForm.reset();
-                    productNameInput.value = ""; // Limpia el campo de nombre de producto
-                    sendButton.textContent = "Enviar Mensaje";
+            console.log("Datos enviados al servidor:", data); // Debugging: Verificar datos
+
+            // Enviar datos al backend usando fetch
+            fetch("http://localhost:3000/api/cotizar", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify(data),
+            })
+                .then((response) => {
+                    if (response.ok) {
+                        return response.json().then(() => {
+                            Swal.fire({
+                                icon: "success",
+                                title: "¡Enviado!",
+                                text: "La solicitud de cotización se creó con éxito.",
+                            }).then(() => {
+                                // Cerrar el modal después de la confirmación
+                                const bootstrapModal = bootstrap.Modal.getInstance(cotizacionModal);
+                                if (bootstrapModal) bootstrapModal.hide();
+                            });
+
+                            cotizacionForm.reset(); // Limpia el formulario
+                            productNameInput.value = ""; // Limpia el campo de nombre de producto
+                        });
+                    } else {
+                        return response.json().then((err) => {
+                            console.error("Error devuelto por el servidor:", err); // Debugging
+                            Swal.fire({
+                                icon: "error",
+                                title: "Error",
+                                text: `Error al enviar: ${err.message || "Error inesperado"}`,
+                            });
+                        });
+                    }
                 })
                 .catch((err) => {
+                    console.error("Error al enviar la cotización:", err); // Debugging
                     Swal.fire({
                         icon: "error",
                         title: "Error",
-                        text: "Error al enviar: " + JSON.stringify(err),
+                        text: "Ocurrió un error inesperado. Por favor, inténtalo nuevamente.",
                     });
+                })
+                .finally(() => {
                     sendButton.textContent = "Enviar Mensaje";
+                    sendButton.disabled = false;
                 });
         });
     }
