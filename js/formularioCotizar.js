@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
     try {
-        emailjs.init("ECOp68bJKsmYRN75I"); // Reemplaza con tu User ID
+        emailjs.init("GFR56TeZVzbqsaCWm"); // Reemplaza con tu User ID
         console.log("EmailJS inicializado correctamente.");
     } catch (error) {
         console.error("Error al inicializar EmailJS:", error);
@@ -58,7 +58,7 @@ document.addEventListener("DOMContentLoaded", function () {
             sendButton.textContent = "Enviando...";
 
             emailjs
-                .sendForm("default_service", "template_11b4txw", cotizacionForm)
+                .sendForm("service_v46ywoh", "template_a25hx9f", cotizacionForm)
                 .then(() => {
                     Swal.fire({
                         icon: "success",

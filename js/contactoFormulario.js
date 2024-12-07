@@ -3,7 +3,7 @@ const alertBox = document.getElementById('alert');
 
 document.getElementById('form').addEventListener('submit', function (event) {
     event.preventDefault();
-    emailjs.init('ECOp68bJKsmYRN75I');
+    emailjs.init('GFR56TeZVzbqsaCWm');
 
     // Ocultar alertas anteriores
     alertBox.style.display = 'none';
@@ -52,8 +52,8 @@ document.getElementById('form').addEventListener('submit', function (event) {
     btn.textContent = 'Enviando...';
     btn.disabled = true;
 
-    const serviceID = 'default_service';
-    const templateID = 'template_36en1ze';
+    const serviceID = 'service_v46ywoh';
+    const templateID = 'template_jd2z8kb';
 
     emailjs.sendForm(serviceID, templateID, this)
         .then(() => {

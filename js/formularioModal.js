@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
-    emailjs.init('ECOp68bJKsmYRN75I');
+    emailjs.init('GFR56TeZVzbqsaCWm');
 
     const sendButton = document.getElementById('sendButton');
     const cotizacionForm = document.getElementById('cotizacionForm');
@@ -45,7 +45,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 reply_to: document.getElementById('message_id').value
             };
     
-            emailjs.send('default_service', 'template_11b4txw', templateParams)
+            emailjs.send('service_v46ywoh', 'template_a25hx9f', templateParams)
                 .then(() => {
                     alert('¡La solicitud de cotización se creó con éxito!');
                     cotizacionForm.reset();
